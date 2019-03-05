@@ -46,7 +46,7 @@ class ConductorController{
 			}
 				
 				}else{
-					require "Vistas/Conductor/Create.php";
+					require "Vistas/Conductor/create.php";
 			}
 
 		}

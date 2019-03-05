@@ -47,7 +47,7 @@ class UsuarioController{
 			}
 				
 				}else{
-					require "Vistas/Usuario/Create.php";
+					require "Vistas/Usuario/create.php";
 			}
 
 		}
