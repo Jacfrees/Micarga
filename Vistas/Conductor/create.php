@@ -1,24 +1,24 @@
 <?php include_once("Vistas/header.php"); ?>
 
-    <div class="container">
-                             <title>LISTADO DE CONDUCTORES</title>
+    <div class="class1">
+                             <h2><b><center> Registrar Conductor</b></center></h2>
 
-                            <form action="" method="post" class="">
+                            <form action="" method="post" class="container">
                             
                             <label >Nombre</label>
-                            <input maxlength="45" type="text"  name="Conductor[Nombre]"   value="" required/>
+                            <input maxlength="45" type="text"  name="Conductor[Nombre]"   value="" required="" autocomplete="off">
                             <br>
                             <label >Cedula</label>
-                            <input maxlength="45" type="text"  name="Conductor[Cedula]"   value="" required/>
+                            <input maxlength="45" type="text"  name="Conductor[Cedula]"   value="" required/ autocomplete="off">
                             <br>
                             <label >Numero Celular</label>
-                            <div class="col-8 col-12-xsmall"><input maxlength="45" type="text"  name="Conductor[NumCelular]"   value="" required/></div>
+                            <div><input maxlength="45" type="text"  name="Conductor[NumCelular]"   value="" required/ autocomplete="off"></div>
                             <br>  
                             <label >Licencia Conduccion</label>
-                            <input maxlength="45" type="text"  name="Conductor[LicConduccion]"   value="" required/>
+                            <input maxlength="45" type="text"  name="Conductor[LicConduccion]"   value="" required/ autocomplete="off">
                             <br>
                             <label>Vencimiento Licencia</label>
-                            <input maxlength="45" type="date"  name="Conductor[VenLicencia]"   value="" required/>
+                            <input maxlength="45" type="date"  name="Conductor[VenLicencia]"   value="" required/ autocomplete="off">
                             <br>
 
                             

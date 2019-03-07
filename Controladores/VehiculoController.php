@@ -39,7 +39,7 @@ class VehiculoController{
 				$pr= $_POST["Vehiculo"]["PlacaRemolque"];
 				$ct= $_POST["Vehiculo"]["CapacidadTanque"];
 				$cp= $_POST["Vehiculo"]["CartaPropiedad"];
-				$idc= $_POST^["Vehiculo"]["Conductor_idConductor"];
+				$idc= $_POST["Vehiculo"]["Conductor_idConductor"];
 				
 
 
@@ -50,8 +50,6 @@ class VehiculoController{
 			}else{
 				echo"ocurrio un error al guardar";
 			}
-				
-		
 
 					require "Vistas/Vehiculo/admin.php";
 			}else{

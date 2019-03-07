@@ -17,6 +17,7 @@
                         <th >Placa Remolque</th>
                         <th >Capacidad Tanque</th>
                         <th >Carta Propiedad</th>
+                        <th >Conductor</th>
                         <th >Acciones</th>
                 
                         </tr>
@@ -32,6 +33,7 @@
             <td><?= $veh->PlacaRemolque;?></td>
             <td><?= $veh->CapacidadTanque;?></td>
             <td><?= $veh->CartaPropiedad;?></td>
+            <td><?= $veh->Conductor_idConductor;?></td>
             
             <td >
              

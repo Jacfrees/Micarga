@@ -2217,6 +2217,7 @@ input, select, textarea {
 	input[type="text"],
 	input[type="password"],
 	input[type="email"],
+	input[type="date"],
 	select,
 	textarea {
 		-moz-appearance: none;
@@ -2241,6 +2242,7 @@ input, select, textarea {
 		input[type="text"]:invalid,
 		input[type="password"]:invalid,
 		input[type="email"]:invalid,
+		input[type="date"]:invalid,
 		select:invalid,
 		textarea:invalid {
 			box-shadow: none;
@@ -2249,6 +2251,7 @@ input, select, textarea {
 		input[type="text"]:focus,
 		input[type="password"]:focus,
 		input[type="email"]:focus,
+		input[type="date"]:focus,
 		select:focus,
 		textarea:focus {
 			border-color: #e44c65;
@@ -2280,6 +2283,7 @@ input, select, textarea {
 	input[type="text"],
 	input[type="password"],
 	input[type="email"],
+	input[type="date"],
 	select {
 		height: 3em;
 	}
@@ -2741,6 +2745,7 @@ input, select, textarea {
 
 		table td {
 			padding: 0.75em 0.75em;
+			text-align: center;
 		}
 
 		table th {
@@ -2748,7 +2753,7 @@ input, select, textarea {
 			font-size: 0.9em;
 			font-weight: 300;
 			padding: 0 0.75em 0.75em 0.75em;
-			text-align: left;
+			text-align: center;
 		}
 
 		table thead {
@@ -4068,3 +4073,8 @@ input, select, textarea {
 					}
 
 	}
+
+.class1{
+	margin-top: 70px;
+	margin-bottom: 70px;
+}

@@ -4,7 +4,7 @@
     <title>LISTADO DE VEHICULOS</title>
 <body>
 
-<form action="index.php?c=Vehiculo&a=create" method="post" autocomplete="off" enctype="multipart/form-data">
+<form method="post" autocomplete="off" >
 
                             
                             <label >Placa Cabezote</label>
@@ -26,8 +26,8 @@
                             <input maxlength="45" type="text"  name="Vehiculo[CartaPropiedad]"   value="" required/>
                             <br>                            <br>
                             <label>Conductor</label>
-                            <select name="Vehiculo[Vehiculo_idVehiculo]"required="" class="custom-señect">
-                                <option name="Vehiculo[Conductor]">Conductor</option>
+                            <select name="Vehiculo[Conductor_idConductor]"required="" >
+                                <option>Conductor</option>
                                 <?php foreach ($conductor as $conduc ) {?>
                                     <option value="<?= $conduc->idConductor ?>"><?= $conduc->Nombre ?></option>
                                    

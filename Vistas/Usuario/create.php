@@ -1,9 +1,9 @@
-  
+<?php include_once("Vistas/header.php"); ?>  
 
-                            <title>LISTADO DE USUARIOS</title>
-                            <div class="container">
+ <div class="class1">
+                                <h2><b><center> Registrar Conductor</b></center></h2>
 
-                            <form action="" method="post" class="">
+                            <form action="" method="post" class="container" autocomplete="off">
 
                             <label >Nombre</label>
                             <input maxlength="45" type="text"  name="Usuario[Nombre]"   value="" required/>
@@ -25,4 +25,6 @@
                         <button type="reset" >Cancelar</button>
                         <button type="submit" class="btn btn-primary">Guardar</button>
                         </form>
-                        </div>
+</div>                          
+
+  <?php include_once("Vistas/footer.php"); ?>                      

@@ -44,20 +44,18 @@ public function save($pc,$m,$c,$pr,$ct,$cp,$idc){
 
 	}
 	
-	
-
 
     public function update (){
 	$Conexion = $this->getConexion();
-	$stm = $Conexion->prepare("UPDATE Vehiculo SET PlacaCabezote=:PlacaCabezote, Modelo=:Modelo, Color=:Color, PlacaRemolque=:PlacaRemolque, CapacidadTanque=:CapacidadTanque, CartaPropiedad=:CartaPropiedad WHERE idVehiculo=:id");
+	$stm = $Conexion->prepare("UPDATE Vehiculo SET PlacaCabezote=:PlacaCabezote, Modelo=:Modelo, Color=:Color, PlacaRemolque=:PlacaRemolque, CapacidadTanque=:CapacidadTanque, CartaPropiedad=:CartaPropiedad, Conductor_idConductor=:Conductor_idConductor WHERE idVehiculo=:id");
 
 	$stm->bindparam(":PlacaCabezote",$this->PlacaCabezote);
 	$stm->bindparam(":Modelo",$this->Modelo);
 	$stm->bindparam(":Color",$this->Color);
 	$stm->bindparam(":PlacaRemolque",$this->PlacaRemolque);
 	$stm->bindparam(":CapacidadTanque",$this->CapacidadTanque);
-	$stm->bindParam("cond",$this->Conductor_idConductor);
-	$stm->bindparam(":id",$this->idVehiculo);
+	$stm->bindParam(":CartaPropiedad",$this->CartaPropiedad);
+	$stm->bindparam(":Conductor_idConductor",$this->Conductor_idConductor);
 
 	$stm->execute();
 
@@ -91,12 +89,6 @@ public function save($pc,$m,$c,$pr,$ct,$cp,$idc){
 
 			
 			while ($obj = $stm->fetch()) {
-
-			$conduid = new Conductor();
-			$conduid->findByPk($obj->Conductor_idConductor);
-			$obj->idc = $conduid;
-
-
 			$Vehiculo[]=$obj;
 	}
 			
