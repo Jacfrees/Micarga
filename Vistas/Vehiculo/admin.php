@@ -1,14 +1,10 @@
-<!DOCTYPE html>
-<html>
-<head>
-<body>
+<?php include_once("Vistas/header.php"); ?>
 
- 
-                            <br><br><br>
+ <div class="class1">
+                      
                             <h2><b><center> Listado De Vehiculos</b></center></h2>
-                            <br>
  
-                        <table align="center"  border="1" >
+                        <table align="center"  border="1" class="container">
                         <tr>
                         <th >id</th>
                         <th >Placa Cabezote</th>
@@ -53,5 +49,5 @@
     <?php } ?>
        
 	</table>
-</body>
-</html>
+</div>    
+<?php include_once("Vistas/footer.php"); ?>

@@ -1,10 +1,8 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>LISTADO DE VEHICULOS</title>
-<body>
+<?php include_once("Vistas/header.php"); ?>
 
-<form method="post" autocomplete="off" >
+ <div class="class1">
+
+<form method="post" autocomplete="off" class="container">
 
                             
                             <label >Placa Cabezote</label>
@@ -38,6 +36,5 @@
                             <button type="reset" >Cancelar</button>
                             <button type="submit" class="btn btn-primary">Guardar</button>
                             </form>
-</body>
-</head>
-</html>
+</div>
+<?php include_once("Vistas/footer.php"); ?>
