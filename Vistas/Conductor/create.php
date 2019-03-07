@@ -1,4 +1,4 @@
-<?php include_once("../header2.php"); ?>
+<?php include_once("Vistas/header.php"); ?>
 
     <div class="container">
                              <title>LISTADO DE CONDUCTORES</title>
@@ -28,4 +28,4 @@
                     </div>
                         
 
-<?php include_once("../footer2.php"); ?>
+<?php include_once("Vistas/footer.php"); ?>
