@@ -23,11 +23,10 @@ switch ($controller) {
 		VehiculoController::main($action);
 	    break;
 
-	case "Usuario":
-		require "Controladores/UsuarioController.php";
-		UsuarioController::main($action);
+	case "Curso":
+		require "Controladores/CursoController.php";
+		CursoController::main($action);
 	    break;
-		
 	}
 
  ?>
