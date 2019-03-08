@@ -1,14 +1,10 @@
-<!DOCTYPE html>
-<html>
-<head>
-<body>
+<?php include_once("Vistas/header.php"); ?>
 
+<div class="class1">
                         <h2><b><center> Listado De Conductores</b></center></h2>
-                        <br>
    
-                        <table align="center"  border="1" >
+                        <table align="center"  border="1" class="container">
                         <tr>
-                        <th >id</th>
                         <th >Nombre</th>
                         <th >Cedula</th>
                         <th >Numero Celular</th>
@@ -19,7 +15,6 @@
             <?php foreach($ms as $ss) {?>
 
     <tr> 
-    <td><?= $ss->idConductor; ?></td>
     <td><?= $ss->Nombre;?></td>
     <td><?= $ss->Cedula;?></td>
     <td><?= $ss->NumCelular;?></td>
@@ -43,6 +38,6 @@
     <?php } ?>
        
 	</table>
+    </div>
  
-</body>
-</html>
+<?php include_once("Vistas/footer.php"); ?>

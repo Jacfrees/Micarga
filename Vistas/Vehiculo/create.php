@@ -1,10 +1,8 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>LISTADO DE VEHICULOS</title>
-<body>
+<?php include_once("Vistas/header.php"); ?>
 
-<form action="index.php?c=Vehiculo&a=create" method="post" autocomplete="off" enctype="multipart/form-data">
+ <div class="class1">
+
+<form method="post" autocomplete="off" class="container">
 
                             
                             <label >Placa Cabezote</label>
@@ -26,8 +24,8 @@
                             <input maxlength="45" type="text"  name="Vehiculo[CartaPropiedad]"   value="" required/>
                             <br>                            <br>
                             <label>Conductor</label>
-                            <select name="Vehiculo[Vehiculo_idVehiculo]"required="" class="custom-señect">
-                                <option name="Vehiculo[Conductor]">Conductor</option>
+                            <select name="Vehiculo[Conductor_idConductor]"required="" >
+                                <option>Conductor</option>
                                 <?php foreach ($conductor as $conduc ) {?>
                                     <option value="<?= $conduc->idConductor ?>"><?= $conduc->Nombre ?></option>
                                    
@@ -38,6 +36,5 @@
                             <button type="reset" >Cancelar</button>
                             <button type="submit" class="btn btn-primary">Guardar</button>
                             </form>
-</body>
-</head>
-</html>
+</div>
+<?php include_once("Vistas/footer.php"); ?>

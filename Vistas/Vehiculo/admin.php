@@ -1,14 +1,10 @@
-<!DOCTYPE html>
-<html>
-<head>
-<body>
+<?php include_once("Vistas/header.php"); ?>
 
- 
-                            <br><br><br>
+ <div class="class1">
+                      
                             <h2><b><center> Listado De Vehiculos</b></center></h2>
-                            <br>
  
-                        <table align="center"  border="1" >
+                        <table align="center"  border="1" class="container">
                         <tr>
                         <th >id</th>
                         <th >Placa Cabezote</th>
@@ -17,6 +13,7 @@
                         <th >Placa Remolque</th>
                         <th >Capacidad Tanque</th>
                         <th >Carta Propiedad</th>
+                        <th >Conductor</th>
                         <th >Acciones</th>
                 
                         </tr>
@@ -32,6 +29,7 @@
             <td><?= $veh->PlacaRemolque;?></td>
             <td><?= $veh->CapacidadTanque;?></td>
             <td><?= $veh->CartaPropiedad;?></td>
+            <td><?= $veh->Conductor_idConductor;?></td>
             
             <td >
              
@@ -51,5 +49,5 @@
     <?php } ?>
        
 	</table>
-</body>
-</html>
+</div>    
+<?php include_once("Vistas/footer.php"); ?>

@@ -4,13 +4,11 @@
 	<title>EDITAR VEHICULO</title>
 <body>
 <a href="index.php?c=Vehiculo&a=admin"><h4>Volver</h4></a>
-<h2 align="center" >Actualizar Vehiculo></h2>
+<h2 align="center" >Actualizar Vehiculo</h2>
 
 <form method="post">
 <center>
-                            <br>
-                            <br>
-                            <br>
+                          
                             <label >Placa Cabezote</label>
                             <input maxlength="45" type="text"  name="Vehiculo[PlacaCabezote]" 
                             value="<?= $Vehiculo->PlacaCabezote ?>" required/>
@@ -35,8 +33,13 @@
                             <input maxlength="45" type="text"  name="Vehiculo[CartaPropiedad]"   
                             value="<?= $Vehiculo->CartaPropiedad ?>" required/>
                              <br>
-
-                           
+                            <select name="Vehiculo[Conductor_idConductor]"required="">
+                                <option value="<?= $vehiculo->Conductor_idConductor ?>"><?= $vehiculo->Conductor_idConductor ?></option>
+                                <?php foreach ($conductor as $conduc ) {?>
+                                    <option value="<?= $conduc->idConductor ?>"><?= $conduc->Nombre ?></option>
+                                   
+                             <?php   } ?>
+                            </select>
 
                            
                         <button type="submit" class="btn btn-primary">Guardar</button>
