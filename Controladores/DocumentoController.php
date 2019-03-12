@@ -75,11 +75,19 @@ class DocumentoController{
 	   		 	$Documento = new Documento();
 	   		 	$Documento->findByPk($_GET["id"]);
 
+	   		 	$veh = new Vehiculo();
+				$vehiculo = $veh->admin();
+
+				$veh = new Vehiculo();
+				$veh->idDoc($_GET["id"]);
+
+
+
 	   		 	if (isset($_POST["Documento"])){
 	   		 		$Documento->Tipo=$_POST["Documento"]["Tipo"];
 	   		 		$Documento->FechaRenovacion=$_POST["Documento"]["FechaRenovacion"];
 	   		 		$Documento->FechaVencimiento=$_POST["Documento"]["FechaVencimiento"];
-	   		 		
+	   		 		$Documento->Numero=$_POST["Documento"]["Numero"];
 	   		 	    $Documento->Vehiculo_idVehiculo = $_POST["Documento"]["Vehiculo_idVehiculo"];
 
 
@@ -89,9 +97,7 @@ class DocumentoController{
 
 	   		 	}else{
 
-	   		 		$veh = new Vehiculo();
-					$vehiculo = $veh->admin();
-
+	   		 		
 	   		 		require "Vistas/Documento/Update.php";
 	   		 	}
 	   		 }

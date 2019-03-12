@@ -1,7 +1,7 @@
 <?php
 require_once("Conexion.php");
 
-require_once "Modelos/Conductor.php";
+require_once ("Modelos/Conductor.php");
 
 
 class Vehiculo extends Conexion{
@@ -82,13 +82,17 @@ public function save($pc,$m,$c,$pr,$ct,$cp,$idc){
 
 	public function admin(){
 	$conexion = $this->getConexion();
-	$stm =$conexion->prepare("SELECT * FROM Vehiculo ");
+	$stm =$conexion->prepare("SELECT * FROM Vehiculo");
 	$stm->setFetchMode(PDO::FETCH_CLASS,'Vehiculo');
 	$Vehiculo = array();	
 	$stm->execute();
 
 			
 			while ($obj = $stm->fetch()) {
+
+				$cond = new Conductor();
+				$cond->findBypk($obj->Conductor_idConductor );
+				$obj->Conduc = $cond;  
 			$Vehiculo[]=$obj;
 	}
 			

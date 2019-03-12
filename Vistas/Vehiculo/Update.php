@@ -33,10 +33,11 @@
                             <input maxlength="45" type="text"  name="Vehiculo[CartaPropiedad]"   
                             value="<?= $Vehiculo->CartaPropiedad ?>" required/>
                              <br>
+
                             <select name="Vehiculo[Conductor_idConductor]"required="">
-                                <option value="<?= $vehiculo->Conductor_idConductor ?>"><?= $vehiculo->Conductor_idConductor ?></option>
+                                <option value="<?= $con->idConductor ?>"> <?= $con->Cedula ?></option>
                                 <?php foreach ($conductor as $conduc ) {?>
-                                    <option value="<?= $conduc->idConductor ?>"><?= $conduc->Nombre ?></option>
+                                    <option value="<?= $conduc->idConductor ?>"><?= $conduc->Cedula ?></option>
                                    
                              <?php   } ?>
                             </select>

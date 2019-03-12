@@ -1,7 +1,7 @@
 <?php include_once("Vistas/header.php"); ?>  
 
  <div class="class1">
-                                <h2><b><center> Registrar Conductor</b></center></h2>
+                                <h2><b><center> Registrar Usuario</b></center></h2>
 
                             <form action="" method="post" class="container" autocomplete="off">
 
@@ -18,7 +18,7 @@
                             <input maxlength="45" type="text"  name="Usuario[Perfil]"   value="" required/>
                             <br>
                             <label>Password</label>
-                            <input maxlength="45" type="text"  name="Usuario[Password]"   value="" required/>
+                            <input maxlength="45" type="Password"  name="Usuario[Password]"   value="" required/>
                             <br>
                            
                             

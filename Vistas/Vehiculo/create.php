@@ -4,7 +4,7 @@
 
 <form method="post" autocomplete="off" class="container">
 
-                            
+                            <h2><b><center> Registrar Vehiculo</b></center></h2>
                             <label >Placa Cabezote</label>
                             <input maxlength="45" type="text"  name="Vehiculo[PlacaCabezote]"   value="" required/>
                             <br>

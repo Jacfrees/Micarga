@@ -27,6 +27,16 @@ switch ($controller) {
 		require "Controladores/CursoController.php";
 		CursoController::main($action);
 	    break;
+
+	case "Usuario":
+		require "Controladores/UsuarioController.php";
+		UsuarioController::main($action);
+	    break;
+
+	case "Documento":
+		require "Controladores/DocumentoController.php";
+		DocumentoController::main($action);
+	    break;
 	}
 
  ?>

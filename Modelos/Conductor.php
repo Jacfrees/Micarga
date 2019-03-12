@@ -64,6 +64,18 @@ public function findBypk($id){
 	$stm->fetch();
 }
 
+public function idVeh($id){
+	$Conexion = $this->getConexion();
+	$stm = $Conexion->prepare("SELECT *FROM Conductor inner join Vehiculo 
+		on Conductor.idConductor = Vehiculo.Conductor_idConductor =:id");
+	$stm->setFetchMode(PDO::FETCH_INTO,$this);
+
+	$stm->bindParam(":id",$id);
+	$stm-> execute();
+	$stm->fetch();
+}
+
+
 public function delete($id){
 			$Conexion =$this->getConexion();
 			$stm = $Conexion->prepare("DELETE  FROM Conductor WHERE idConductor = :id");
@@ -81,6 +93,7 @@ public function delete($id){
 
 			
 			while ($obj = $stm->fetch()) {
+
 				$ms[]=$obj;
 			}
 			

@@ -75,7 +75,7 @@ public function delete($id){
 
 			
 			while ($obj = $stm->fetch()) {
-				$Curso]=$obj;
+				$Curso[]=$obj;
 			}
 			
 			return $Curso;

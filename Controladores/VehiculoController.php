@@ -76,6 +76,13 @@ class VehiculoController{
 	   		 private function update(){
 	   		 	$Vehiculo = new Vehiculo();
 	   		 	$Vehiculo->findByPk($_GET["id"]);
+	   		 	
+	   		 	$con = new Conductor();
+				$conductor = $con->admin();
+
+				$con = new Conductor();
+	   		 	$con->idVeh($_GET["id"]);
+
 
 	   		 	if (isset($_POST["Vehiculo"])){
 	   		 		$Vehiculo->PlacaCabezote=$_POST["Vehiculo"]["PlacaCabezote"];
@@ -93,8 +100,7 @@ class VehiculoController{
 
 	   		 	}else{
 
-	   		 		$con = new Conductor();
-					$conductor = $con->admin();
+	   		 		
 
 	   		 		require "Vistas/Vehiculo/Update.php";
 	   		 	}

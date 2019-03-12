@@ -49,8 +49,8 @@ class CursoController{
 				
 				}else{
 
-					$cur = new Curso();
-					$curso = $cur->admin();
+					$con = new Conductor();
+					$conductor = $con->admin();
 
 				require "Vistas/Curso/create.php";
 					
