@@ -75,6 +75,10 @@ public function delete($id){
 
 			
 			while ($obj = $stm->fetch()) {
+
+				$cond = new Conductor();
+				$cond->findBypk($obj->Conductor_idConductor );
+				$obj->Conduc = $cond;  	
 				$Curso[]=$obj;
 			}
 			

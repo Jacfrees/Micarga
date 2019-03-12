@@ -36,12 +36,13 @@ class DocumentoController{
 				$tip=$_POST["Documento"]["Tipo"];
 				$fere= $_POST["Documento"]["FechaRenovacion"];
 				$feve= $_POST["Documento"]["FechaVencimiento"];
+				$num= $_POST["Documento"]["Numero"];
 				$idv= $_POST["Documento"]["Vehiculo_idVehiculo"];
 				
 
 
 			$Documento = new Documento();
-			$guardo = $Documento->save($tip,$fere,$feve,$idv);
+			$guardo = $Documento->save($tip,$fere,$feve,$num,$idv);
 			if ($guardo){
 			    header("location:index.php?c=Documento&a=admin");
 			}else{
@@ -79,7 +80,7 @@ class DocumentoController{
 				$vehiculo = $veh->admin();
 
 				$veh = new Vehiculo();
-				$veh->idDoc($_GET["id"]);
+				$veh->iddoc($_GET["id"]);
 
 
 

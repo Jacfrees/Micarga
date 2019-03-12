@@ -4,7 +4,7 @@ require_once("Conexion.php");
 require_once "Modelos/Vehiculo.php";
 
 
-class Vehiculo extends Conexion{
+class Documento extends Conexion{
 
 	Public $idDocumento;
 	public $Tipo;
@@ -49,7 +49,7 @@ public function save($tip,$fere,$feve,$num,$idv){
 	$stm->bindparam(":FechaRenovacion",$this->FechaRenovacion);
 	$stm->bindparam(":FechaVencimiento",$this->FechaVencimiento);
 	$stm->bindparam(":Numero",$this->Numero);
-	$stm->bindparam(":Conductor_idConductor",$this->Vehiculo_idVehiculo);
+	$stm->bindparam(":Vehiculo_idVehiculo",$this->Vehiculo_idVehiculo);
 
 	$stm->execute();
 
@@ -83,6 +83,10 @@ public function save($tip,$fere,$feve,$num,$idv){
 
 			
 			while ($obj = $stm->fetch()) {
+
+				$vehic = new Vehiculo();
+				$vehic->findBypk($obj->Vehiculo_idVehiculo);
+				$obj->vehi = $vehic;
 			$Documento[]=$obj;
 	}
 			

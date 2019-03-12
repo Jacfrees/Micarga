@@ -19,14 +19,14 @@
                                 <input maxlength="45" type="date"  name="Curso[FechaVencimiento]" 
                                 value="<?= $Curso->FechaVencimiento ?>" required/>
                                 <br>
-
-                                <select name="Curso[Conductor_idConductor]"required="">
-                                <option value="<?= $curso->Conductor_idConductor ?>"><?= $curso->Conductor_idConductor ?></option>
+                                 <select name="Vehiculo[Conductor_idConductor]"required="">
+                                <option value="<?= $con->idConductor ?>"> <?= $con->Nombre ?></option>
                                 <?php foreach ($conductor as $conduc ) {?>
                                     <option value="<?= $conduc->idConductor ?>"><?= $conduc->Nombre ?></option>
                                    
                              <?php   } ?>
                             </select>
+                               
                                
                             <button type="submit" class="btn btn-primary">Guardar</button>
                             </form>

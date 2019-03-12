@@ -72,6 +72,13 @@ class CursoController{
 	   		 	$Curso = new Curso();
 	   		 	$Curso->findByPk($_GET["id"]);
 
+	   		 	$con = new Conductor();
+				$conductor = $con->admin();
+
+				$con = new Conductor();
+	   		 	$con->id..($_GET["id"]);
+
+
 	   		 	if (isset($_POST["Curso"])){
 	   		 		$Curso->Nombre=$_POST["Curso"]["Nombre"];
 	   		 		$Curso->FechaInicio=$_POST["Curso"]["FechaInicio"];
@@ -85,8 +92,7 @@ class CursoController{
 
 	   		 	}else{
 
-	   		 		$con = new Conductor();
-					$conductor = $con->admin();
+	   		 		
 	   		 		
 	   		 		require "Vistas/Curso/Update.php";
 	   		 	}

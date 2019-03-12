@@ -25,7 +25,7 @@
             <td><?= $doc->FechaRenovacion;?></td>
             <td><?= $doc->FechaVencimiento;?></td>
             <td><?= $doc->Numero;?></td>
-            <td><?= $doc->Conduc->Cedula;?></td>
+            <td><?= $doc->vehi->Modelo;?></td>
             
             <td >
              

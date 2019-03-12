@@ -19,7 +19,7 @@
                             <br>                            
                             <label>Vehiculo</label>
                             <select name="Documento[Vehiculo_idVehiculo]"required="" >
-                                <option>Vehiculo</option>
+                               <option>Vehiculo</option>
                                 <?php foreach ($vehiculo as $vehi ) {?>
                                     <option value="<?= $vehi->idVehiculo ?>"><?= $vehi->Tipo ?></option>
                                    
