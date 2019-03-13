@@ -91,7 +91,7 @@ class VehiculoController{
 	   		 		$Vehiculo->PlacaRemolque=$_POST["Vehiculo"]["PlacaRemolque"];
 	   		 		$Vehiculo->CapacidadTanque=$_POST["Vehiculo"]["CapacidadTanque"];
 	   		 		$Vehiculo->CartaPropiedad=$_POST["Vehiculo"]["CartaPropiedad"];
-	   		 	    $Vehiculo->Conductor_idConductor = $_POST["Vehiculo"]["Conductor_idConductor"];
+	   		 	    $Vehiculo->Conductor_idConductor=$_POST["Vehiculo"]["Conductor_idConductor"];
 
 
 

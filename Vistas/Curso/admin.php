@@ -5,6 +5,7 @@
    
                         <table align="center"  border="1" class="container">
                         <tr>
+                        <th>id</th>
                         <th >Nombre</th>
                         <th >Fecha Inicio</th>
                         <th >Fecha Vencimiento</th>
@@ -14,6 +15,7 @@
             <?php foreach($Curso as $ss) {?>
 
     <tr> 
+    <td><?$ss->idCurso;?></td>
     <td><?= $ss->Nombre;?></td>
     <td><?= $ss->FechaInicio;?></td>
     <td><?= $ss->FechaVencimiento;?></td>
