@@ -19,7 +19,7 @@
     <td><?= $ss->Nombre;?></td>
     <td><?= $ss->FechaInicio;?></td>
     <td><?= $ss->FechaVencimiento;?></td>
-    <td><?= $ss->Conduc->Nombre;?></td>
+    <td><?= $ss->Conduc->Cedula;?></td>
    
     <td >
 

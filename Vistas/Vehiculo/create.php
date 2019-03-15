@@ -27,7 +27,7 @@
                             <select name="Vehiculo[Conductor_idConductor]"required="" >
                                 <option>Conductor</option>
                                 <?php foreach ($conductor as $conduc ) {?>
-                                    <option value="<?= $conduc->idConductor ?>"><?= $conduc->Nombre ?></option>
+                                    <option value="<?= $conduc->idConductor ?>"><?= $conduc->Cedula ?></option>
                                    
                              <?php   } ?>
                             </select>

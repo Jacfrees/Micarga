@@ -29,7 +29,7 @@
             <td><?= $veh->PlacaRemolque;?></td>
             <td><?= $veh->CapacidadTanque;?></td>
             <td><?= $veh->CartaPropiedad;?></td>
-            <td><?= $veh->Conduc->Nombre;?></td>
+            <td><?= $veh->Conduc->Cedula;?></td>
             
             <td >
              

@@ -8,8 +8,8 @@
                             <label >Nombre</label>
                             <input maxlength="45" type="text"  name="Conductor[Nombre]"   value="" required="" autocomplete="off">
                             <br>
-                            <label >Cedula</label>
-                            <input maxlength="45" type="text"  name="Conductor[Cedula]"   value="" required/ autocomplete="off">
+                            <label >Documento</label>
+                            <input maxlength="45" type="text"  name="Conductor[Documento]"   value="" required/ autocomplete="off">
                             <br>
                             <label >Numero Celular</label>
                             <div><input maxlength="45" type="text"  name="Conductor[NumCelular]"   value="" required/ autocomplete="off"></div>

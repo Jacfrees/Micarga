@@ -35,9 +35,9 @@
                              <br>
 
                             <select name="Vehiculo[Conductor_idConductor]"required="" value="<?= $Vehiculo->Conductor_idConductor ?>">
-                                <option value="<?= $con->idConductor ?>"> <?= $con->Nombre ?></option>
+                                <option value="<?= $con->idConductor ?>"> <?= $con->Cedula ?></option>
                                 <?php foreach ($conductor as $conduc ) {?>
-                                    <option value="<?= $conduc->idConductor ?>"><?= $conduc->Nombre ?></option>
+                                    <option value="<?= $conduc->idConductor ?>"><?= $conduc->Cedula ?></option>
                                    
                              <?php   } ?>
                             </select>

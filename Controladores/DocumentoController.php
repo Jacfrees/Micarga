@@ -80,7 +80,7 @@ class DocumentoController{
 				$vehiculo = $veh->admin();
 
 				$veh = new Vehiculo();
-				$veh->iddoc($_GET["id"]);
+				$veh->idVeh($_GET["id"]);
 
 
 

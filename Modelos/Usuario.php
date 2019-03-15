@@ -64,6 +64,16 @@ public function findBypk($id){
 	$stm->fetch();
 }
 
+public function findByDocument($doc){
+		$conexion = $this->getConexion();
+		$stm = $conexion->prepare("SELECT * FROM Usuario WHERE Documento = :doc");
+		$stm ->setFetchMode(PDO::FETCH_INTO,$this);
+
+		$stm->bindParam(":doc",$doc);
+		$stm-> execute();
+		$stm->fetch();
+}
+
 public function delete($id){
 			$Conexion =$this->getConexion();
 			$stm = $Conexion->prepare("DELETE  FROM Usuario WHERE idUsuario = :id");
@@ -87,6 +97,22 @@ public function delete($id){
 			return $usua;
 
 }
+		public function view($Id) { 
+            $Conexion =$this->getConexion(); 
+			$stm = $Conexion->prepare("SELECT * FROM Usuario WHERE Documento = :id"); 
+            $stm->bindParam(":id", $id); 
+			$stm->setFetchMode(PDO::FETCH_CLASS,'Usuario'); 
+ 
+			$Usuario = array(); 
+			$stm->execute(); 
+ 
+			while ($obj = $stm->fetch()) { 
+				$Usuario[]=$obj; 
+			} 
+			return $Usuario; 
+                
+		}
+
 }
 
 

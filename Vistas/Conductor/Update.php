@@ -10,9 +10,9 @@
                                 <input maxlength="45" type="text"  name="Conductor[Nombre]" 
                                 value="<?= $Conductor->Nombre ?>" required/>
                                 <br>
-                                <label >Cedula</label>
-                                <input maxlength="45" type="text"  name="Conductor[Cedula]"   
-                                value="<?= $Conductor->Cedula ?>" required/>
+                                <label >Documento</label>
+                                <input maxlength="45" type="text"  name="Conductor[Documento]"   
+                                value="<?= $Conductor->Documento ?>" required/>
                                  <br>
                                <label >Numero Celular</label>
                                 <input maxlength="45" type="text"  name="Conductor[NumCelular]"  

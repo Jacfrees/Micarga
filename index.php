@@ -37,6 +37,11 @@ switch ($controller) {
 		require "Controladores/DocumentoController.php";
 		DocumentoController::main($action);
 	    break;
+
+	default://controlador de inicio
+			require "Controladores/homeController.php";
+			//accion estatica ::
+			homeController::main($action);
 	}
 
  ?>

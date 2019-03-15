@@ -6,7 +6,7 @@ class Conductor extends Conexion{
 
 	Public $idConductor;
 	public $Nombre;
-	Public $Cedula;
+	Public $Documento;
 	public $NumCelular;
 	public $LicConduccion;
 	public $VenLicencia;
@@ -15,16 +15,16 @@ class Conductor extends Conexion{
 	parent::__construct();
 }
 
-public function save($nom,$ced,$numcel,$lc,$vl){
+public function save($nom,$doc,$numcel,$lc,$vl){
 
 	$this->Nombre=$nom;
-	$this->Cedula=$ced;
+	$this->Documento=$doc;
 	$this->NumCelular=$numcel;
 	$this->LicConduccion=$lc;
 	$this->VenLicencia=$vl;
 
 	$Conexion = $this->getConexion();
-	$stm = $Conexion->prepare("INSERT INTO Conductor VALUES (:idConductor, :Nombre, :Cedula, :NumCelular, :LicConduccion, :VenLicencia)");
+	$stm = $Conexion->prepare("INSERT INTO Conductor VALUES (:idConductor, :Nombre, :Documento, :NumCelular, :LicConduccion, :VenLicencia)");
 	try{
 		return $stm->execute((array)$this);
 		return true;
@@ -40,10 +40,10 @@ public function save($nom,$ced,$numcel,$lc,$vl){
 public function update (){
 	$Conexion = $this->getConexion();
 
-	$stm = $Conexion->prepare("UPDATE Conductor SET Nombre=:Nombre, Cedula=:Cedula, NumCelular=:NumCelular, LicConduccion=:LicConduccion, VenLicencia=:VenLicencia WHERE idConductor= :id");
+	$stm = $Conexion->prepare("UPDATE Conductor SET Nombre=:Nombre, Documento=:Documento, NumCelular=:NumCelular, LicConduccion=:LicConduccion, VenLicencia=:VenLicencia WHERE idConductor= :id");
 
 	$stm->bindparam(":Nombre",$this->Nombre);
-	$stm->bindparam(":Cedula",$this->Cedula);
+	$stm->bindparam(":Documento",$this->Documento);
 	$stm->bindparam(":NumCelular",$this->NumCelular);
 	$stm->bindparam(":LicConduccion",$this->LicConduccion);
 	$stm->bindparam(":VenLicencia",$this->VenLicencia);
@@ -62,6 +62,16 @@ public function findBypk($id){
 	$stm->bindParam(":id",$id);
 	$stm-> execute();
 	$stm->fetch();
+}
+
+public function findByDocument($doc){
+		$conexion = $this->getConexion();
+		$stm = $conexion->prepare("SELECT * FROM Conductor WHERE Documento = :doc");
+		$stm ->setFetchMode(PDO::FETCH_INTO,$this);
+
+		$stm->bindParam(":doc",$doc);
+		$stm-> execute();
+		$stm->fetch();
 }
 
 public function idVeh($id){

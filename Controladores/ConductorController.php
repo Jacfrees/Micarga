@@ -32,13 +32,13 @@ class ConductorController{
 		private function create(){
 			if(isset($_POST["Conductor"])){
 				$nom= $_POST["Conductor"]["Nombre"];
-				$ced= $_POST["Conductor"]["Cedula"];
+				$doc= $_POST["Conductor"]["Documento"];
 				$numcel= $_POST["Conductor"]["NumCelular"];
 				$lc= $_POST["Conductor"]["LicConduccion"];
 				$vl= $_POST["Conductor"]["VenLicencia"];
 
 			$conductor = new Conductor();
-			$guardo = $conductor->save($nom,$ced,$numcel,$lc,$vl);
+			$guardo = $conductor->save($nom,$doc,$numcel,$lc,$vl);
 			if ($guardo){
 			 	header("location:index.php?c=Conductor&a=admin");
 			}else{
@@ -64,7 +64,7 @@ class ConductorController{
 
 	   		 	if (isset($_POST["Conductor"])){
 	   		 		$Conductor->Nombre=$_POST["Conductor"]["Nombre"];
-	   		 		$Conductor->Cedula=$_POST["Conductor"]["Cedula"];
+	   		 		$Conductor->Documento=$_POST["Conductor"]["Documento"];
 	   		 		$Conductor->NumCelular=$_POST["Conductor"]["NumCelular"];
 	   		 		$Conductor->LicConduccion=$_POST["Conductor"]["LicConduccion"];
 	   		 		$Conductor->VenLicencia=$_POST["Conductor"]["VenLicencia"];

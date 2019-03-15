@@ -71,6 +71,7 @@ public function save($pc,$m,$c,$pr,$ct,$cp,$idc){
 	$stm-> execute();
 	$stm->fetch();
 }
+	
 
     public function delete($id){
 	$Conexion =$this->getConexion();
