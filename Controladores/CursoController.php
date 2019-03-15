@@ -107,6 +107,12 @@ class CursoController{
 	   		 		header("Location:index.php?c=Curso&a=admin");
 	   		 	}
 	   		 }
+	   		 private function view(){ 
+				$Curso= new Curso(); 
+				$Curso = $Curso->view ($_POST['nhab']); 
+			require "Vistas/Curso/Consultar.php"; 
+			}
+
 
 	}
 ?>

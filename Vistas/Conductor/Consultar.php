@@ -6,7 +6,7 @@
 </head>
 <body>
 <br><br>
-<center><a href="index.php?c=Usuario&a=admin" class="btn btn-outline-danger">volver</a></center>
+<center><a href="index.php?c=Conductor&a=admin" class="btn btn-outline-danger">volver</a></center>
 <br><br><br><br><br><br><br><br><br><br> 
 <table width="200" border="1" cellspacing="2" cellpadding="2" align="center" class="table table-bordered table-dark"> 
   <tbody> 
@@ -14,20 +14,20 @@
       <th scope="col">id</th> 
       <th scope="col">Nombre</th> 
       <th scope="col">Documento</th> 
-      <th scope="col">Telefono</th> 
-      <th scope="col">Perfil</th> 
-      <th scope="col">Password</th> 
+      <th scope="col">NumCelular</th> 
+      <th scope="col">LicConduccion</th> 
+      <th scope="col">VenLicencia</th> 
      
       
     </tr> 
-    	   <?php foreach ($usua as $us) {?> 
+    	   <?php foreach($ms as $ss) {?>
     <tr> 
-      <th scope="row"><?= $us->idUsuario; ?></th> 
-      <td><?= $us->Nombre; ?></td> 
-      <td><?= $us->Documento; ?></td> 
-      <td><?= $us->Telefono; ?></td> 
-      <td><?= $us->Perfil; ?></td> 
-      <td><?= $us->Password; ?></td> 
+      <th scope="row"><?= $ss->idConductor; ?></th> 
+      <td><?= $ss->Nombre; ?></td> 
+      <td><?= $ss->Documento; ?></td> 
+      <td><?= $ss->NumCelular; ?></td> 
+      <td><?= $ss->LicConduccion; ?></td> 
+      <td><?= $ss->VenLicencia; ?></td> 
        
     </tr> 
     <?php } ?> 

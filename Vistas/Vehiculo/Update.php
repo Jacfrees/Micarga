@@ -24,20 +24,27 @@
                             <label >Placa Remolque</label>
                             <input maxlength="45" type="text"  name="Vehiculo[PlacaRemolque]"   
                             value="<?= $Vehiculo->PlacaRemolque ?>" required/>
-                              <br>
+                            <br>
                             <label >Capacidad Tanque</label>
                             <input maxlength="45" type="text"  name="Vehiculo[CapacidadTanque]"   
                             value="<?= $Vehiculo->CapacidadTanque ?>" required/>
-                              <br>
+                            <br>
                             <label >Carta Propiedad</label>
                             <input maxlength="45" type="text"  name="Vehiculo[CartaPropiedad]"   
                             value="<?= $Vehiculo->CartaPropiedad ?>" required/>
-                             <br>
+                            <br>
+                            <label>Seccional:</label>
+                            <select name="Vehiculo[Seccional]" value="" required="">
+                            <option value="">Seleccione una seccional</option>
+                            <option value="<?= $Vehiculo->Seccional ?>">Sogamoso</option>
+                            <option value="<?= $Vehiculo->Seccional ?>">Corrales</option>
+                            <option value="<?= $Vehiculo->Seccional ?>">Yopal</option>
+                            </select><br><br>
 
                             <select name="Vehiculo[Conductor_idConductor]"required="" value="<?= $Vehiculo->Conductor_idConductor ?>">
-                                <option value="<?= $con->idConductor ?>"> <?= $con->Cedula ?></option>
+                                <option value="<?= $con->idConductor ?>"> <?= $con->Documento ?></option>
                                 <?php foreach ($conductor as $conduc ) {?>
-                                    <option value="<?= $conduc->idConductor ?>"><?= $conduc->Cedula ?></option>
+                                    <option value="<?= $conduc->idConductor ?>"><?= $conduc->Documento ?></option>
                                    
                              <?php   } ?>
                             </select>

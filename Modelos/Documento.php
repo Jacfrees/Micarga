@@ -93,8 +93,23 @@ public function save($tip,$fere,$feve,$num,$idv){
 			return $Documento;
 
 }
+
+	public function view($Id) { 
+            $Conexion =$this->getConexion(); 
+			$stm = $Conexion->prepare("SELECT * FROM Documento WHERE Numero = :id"); 
+            $stm->bindParam(":id", $id); 
+			$stm->setFetchMode(PDO::FETCH_CLASS,'Documento'); 
+ 
+			$Usuario = array(); 
+			$stm->execute(); 
+ 
+			while ($obj = $stm->fetch()) { 
+				$Documento[]=$obj; 
+			} 
+			return $Documento; 
+                
+		}
+
 }
-
-
 
 ?>

@@ -13,6 +13,7 @@ class Vehiculo extends Conexion{
 	public $PlacaRemolque;
 	public $CapacidadTanque;
 	public $CartaPropiedad;
+	public $Seccional;
 	public $Conductor_idConductor;
 	
 
@@ -20,7 +21,7 @@ class Vehiculo extends Conexion{
 	parent::__construct();
 }
 
-public function save($pc,$m,$c,$pr,$ct,$cp,$idc){
+public function save($pc,$m,$c,$pr,$ct,$cp,$sec,$idc){
 
 	$this->PlacaCabezote=$pc;
 	$this->Modelo=$m;
@@ -28,11 +29,12 @@ public function save($pc,$m,$c,$pr,$ct,$cp,$idc){
 	$this->PlacaRemolque=$pr;
 	$this->CapacidadTanque=$ct;
 	$this->CartaPropiedad=$cp;
+	$this->Seccional=$sec;
 	$this->Conductor_idConductor=$idc;
 	
 
 	$Conexion = $this->getConexion();
-	$stm = $Conexion->prepare("INSERT INTO Vehiculo VALUES (:idVehiculo, :PlacaCabezote, :Modelo, :Color, :PlacaRemolque, :CapacidadTanque, :CartaPropiedad, :Conductor_idConductor)");
+	$stm = $Conexion->prepare("INSERT INTO Vehiculo VALUES (:idVehiculo, :PlacaCabezote, :Modelo, :Color, :PlacaRemolque, :CapacidadTanque, :CartaPropiedad, :Seccional, :Conductor_idConductor)");
 	
 	try{
 			return $stm->execute((array)$this);
@@ -47,7 +49,7 @@ public function save($pc,$m,$c,$pr,$ct,$cp,$idc){
 
     public function update (){
 	$Conexion = $this->getConexion();
-	$stm = $Conexion->prepare("UPDATE Vehiculo SET PlacaCabezote=:PlacaCabezote, Modelo=:Modelo, Color=:Color, PlacaRemolque=:PlacaRemolque, CapacidadTanque=:CapacidadTanque, CartaPropiedad=:CartaPropiedad, Conductor_idConductor=:Conductor_idConductor WHERE idVehiculo=:id");
+	$stm = $Conexion->prepare("UPDATE Vehiculo SET PlacaCabezote=:PlacaCabezote, Modelo=:Modelo, Color=:Color, PlacaRemolque=:PlacaRemolque, CapacidadTanque=:CapacidadTanque, CartaPropiedad=:CartaPropiedad, Seccional=:Seccional, Conductor_idConductor=:Conductor_idConductor WHERE idVehiculo=:id");
 
 	$stm->bindparam(":PlacaCabezote",$this->PlacaCabezote);
 	$stm->bindparam(":Modelo",$this->Modelo);
@@ -55,6 +57,7 @@ public function save($pc,$m,$c,$pr,$ct,$cp,$idc){
 	$stm->bindparam(":PlacaRemolque",$this->PlacaRemolque);
 	$stm->bindparam(":CapacidadTanque",$this->CapacidadTanque);
 	$stm->bindParam(":CartaPropiedad",$this->CartaPropiedad);
+	$stm->bindparam(":Seccional",$this->Seccional);
 	$stm->bindparam(":Conductor_idConductor",$this->Conductor_idConductor);
 
 	$stm->execute();
@@ -100,8 +103,21 @@ public function save($pc,$m,$c,$pr,$ct,$cp,$idc){
 			return $Vehiculo;
 
 }
+	public function view($Id) { 
+            $Conexion =$this->getConexion(); 
+			$stm = $Conexion->prepare("SELECT * FROM Vehiculo WHERE PlacaCabezote = :id"); 
+            $stm->bindParam(":id", $id); 
+			$stm->setFetchMode(PDO::FETCH_CLASS,'Vehiculo'); 
+ 
+			$Vehiculo = array(); 
+			$stm->execute(); 
+ 
+			while ($obj = $stm->fetch()) { 
+				$Vehiculo[]=$obj; 
+			} 
+			return $Vehiculo; 
+                
+		}
 }
-
-
 
 ?>

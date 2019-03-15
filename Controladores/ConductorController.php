@@ -87,5 +87,12 @@ class ConductorController{
 	   		 	}
 	   		 }
 
+	   		 private function view(){ 
+				$Conductor= new Conductor(); 
+				$Conductor = $Conductor->view ($_POST['nhab']); 
+			require "Vistas/Conductor/Consultar.php"; 
+			}
+
+
 	}
 ?>

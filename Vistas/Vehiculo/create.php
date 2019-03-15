@@ -22,12 +22,23 @@
                             <br>
                             <label>Carta Propiedad</label>
                             <input maxlength="45" type="text"  name="Vehiculo[CartaPropiedad]"   value="" required/>
-                            <br>                            <br>
+                            <br>
+
+                            <label>Seccional:</label>
+                            <select name="Vehiculo[Seccional]" value="" required="">
+                            <option value="">Seleccione una seccional</option>
+                            <option value="Sogamoso">Sogamoso</option>
+                            <option value="Corrales">Corrales</option>
+                            <option value="Yopal">Yopal</option>
+
+                            </select><br><br>   
+
+                            <br>                            
                             <label>Conductor</label>
                             <select name="Vehiculo[Conductor_idConductor]"required="" >
                                 <option>Conductor</option>
                                 <?php foreach ($conductor as $conduc ) {?>
-                                    <option value="<?= $conduc->idConductor ?>"><?= $conduc->Cedula ?></option>
+                                    <option value="<?= $conduc->idConductor ?>"><?= $conduc->Documento ?></option>
                                    
                              <?php   } ?>
                             </select>

@@ -115,6 +115,4 @@ public function delete($id){
 
 }
 
-
-
 ?>

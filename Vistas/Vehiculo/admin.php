@@ -13,6 +13,7 @@
                         <th >Placa Remolque</th>
                         <th >Capacidad Tanque</th>
                         <th >Carta Propiedad</th>
+                        <th>Seccional</th>
                         <th >Conductor</th>
                         <th >Acciones</th>
                 
@@ -29,7 +30,8 @@
             <td><?= $veh->PlacaRemolque;?></td>
             <td><?= $veh->CapacidadTanque;?></td>
             <td><?= $veh->CartaPropiedad;?></td>
-            <td><?= $veh->Conduc->Cedula;?></td>
+            <td><?= $veh->Seccional;?></td>
+            <td><?= $veh->Conduc->Documento;?></td>
             
             <td >
              

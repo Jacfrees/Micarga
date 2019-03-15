@@ -113,8 +113,12 @@ class DocumentoController{
 	   		 	}
 	   		 		
 	   		 }
+	   	     private function view(){ 
+				$Documento= new Documento(); 
+				$Documento = $Documento->view ($_POST['nhab']); 
+			require "Vistas/Documento/Consultar.php"; 
+			}
     }
 
-	
 ?>
 
