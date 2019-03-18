@@ -8,7 +8,8 @@
 <body>
   
         <div class="Login">
-          <form method="post" class="signin" action="index.php?c=home&a=Login" name="Login">
+          <form action= "index.php?c=home&a=login" method="post" class="signin" action="" name="Login">
+            
             <h1>BIENVENIDOS</h1>
                 <fieldset class="textbox">
                 <label class="username">
