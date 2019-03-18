@@ -1,8 +1,7 @@
-<?php 
-
+<?php
 
 $action = "admin";//accion por defecto
-$controller = "Conductor";//controlador por defecto 
+$controller = "home";//controlador por defecto 
 if (isset($_GET["a"])) 
 	$action = $_GET["a"];
 
