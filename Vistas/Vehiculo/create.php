@@ -1,12 +1,10 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>LISTADO DE VEHICULOS</title>
-<body>
+<?php include_once("Vistas/header.php"); ?>
 
-<form action="index.php?c=Vehiculo&a=create" method="post" autocomplete="off" enctype="multipart/form-data">
+ <div class="class1">
 
-                            
+<form method="post" autocomplete="off" class="container">
+
+                            <h2><b><center> Registrar Vehiculo</b></center></h2>
                             <label >Placa Cabezote</label>
                             <input maxlength="45" type="text"  name="Vehiculo[PlacaCabezote]"   value="" required/>
                             <br>
@@ -24,12 +22,23 @@
                             <br>
                             <label>Carta Propiedad</label>
                             <input maxlength="45" type="text"  name="Vehiculo[CartaPropiedad]"   value="" required/>
-                            <br>                            <br>
+                            <br>
+
+                            <label>Seccional:</label>
+                            <select name="Vehiculo[Seccional]" value="" required="">
+                            <option value="">Seleccione una seccional</option>
+                            <option value="Sogamoso">Sogamoso</option>
+                            <option value="Corrales">Corrales</option>
+                            <option value="Yopal">Yopal</option>
+
+                            </select><br><br>   
+
+                            <br>                            
                             <label>Conductor</label>
-                            <select name="Vehiculo[Vehiculo_idVehiculo]"required="" class="custom-señect">
-                                <option name="Vehiculo[Conductor]">Conductor</option>
+                            <select name="Vehiculo[Conductor_idConductor]"required="" >
+                                <option>Conductor</option>
                                 <?php foreach ($conductor as $conduc ) {?>
-                                    <option value="<?= $conduc->idConductor ?>"><?= $conduc->Nombre ?></option>
+                                    <option value="<?= $conduc->idConductor ?>"><?= $conduc->Documento ?></option>
                                    
                              <?php   } ?>
                             </select>
@@ -38,6 +47,5 @@
                             <button type="reset" >Cancelar</button>
                             <button type="submit" class="btn btn-primary">Guardar</button>
                             </form>
-</body>
-</head>
-</html>
+</div>
+<?php include_once("Vistas/footer.php"); ?>

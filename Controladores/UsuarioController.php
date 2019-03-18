@@ -47,7 +47,7 @@ class UsuarioController{
 			}
 				
 				}else{
-					require "Vistas/Usuario/Create.php";
+					require "Vistas/Usuario/create.php";
 			}
 
 		}
@@ -87,6 +87,14 @@ class UsuarioController{
 	   		 		header("Location:index.php?c=Usuario&a=admin");
 	   		 	}
 	   		 }
+
+	   		 private function view(){ 
+				$Usuario= new Usuario(); 
+				$Usuario = $Usuario->view ($_POST['nhab']); 
+			require "Vistas/Usuario/Consultar.php"; 
+			}
+
+		
 
 	}
 ?>

@@ -4,13 +4,11 @@
 	<title>EDITAR VEHICULO</title>
 <body>
 <a href="index.php?c=Vehiculo&a=admin"><h4>Volver</h4></a>
-<h2 align="center" >Actualizar Vehiculo></h2>
+<h2 align="center" >Actualizar Vehiculo</h2>
 
 <form method="post">
 <center>
-                            <br>
-                            <br>
-                            <br>
+                          
                             <label >Placa Cabezote</label>
                             <input maxlength="45" type="text"  name="Vehiculo[PlacaCabezote]" 
                             value="<?= $Vehiculo->PlacaCabezote ?>" required/>
@@ -26,17 +24,30 @@
                             <label >Placa Remolque</label>
                             <input maxlength="45" type="text"  name="Vehiculo[PlacaRemolque]"   
                             value="<?= $Vehiculo->PlacaRemolque ?>" required/>
-                              <br>
+                            <br>
                             <label >Capacidad Tanque</label>
                             <input maxlength="45" type="text"  name="Vehiculo[CapacidadTanque]"   
                             value="<?= $Vehiculo->CapacidadTanque ?>" required/>
-                              <br>
+                            <br>
                             <label >Carta Propiedad</label>
                             <input maxlength="45" type="text"  name="Vehiculo[CartaPropiedad]"   
                             value="<?= $Vehiculo->CartaPropiedad ?>" required/>
-                             <br>
+                            <br>
+                            <label>Seccional:</label>
+                            <select name="Vehiculo[Seccional]" value="" required="">
+                            <option value="">Seleccione una seccional</option>
+                            <option value="<?= $Vehiculo->Seccional ?>">Sogamoso</option>
+                            <option value="<?= $Vehiculo->Seccional ?>">Corrales</option>
+                            <option value="<?= $Vehiculo->Seccional ?>">Yopal</option>
+                            </select><br><br>
 
-                           
+                            <select name="Vehiculo[Conductor_idConductor]"required="" value="<?= $Vehiculo->Conductor_idConductor ?>">
+                                <option value="<?= $con->idConductor ?>"> <?= $con->Documento ?></option>
+                                <?php foreach ($conductor as $conduc ) {?>
+                                    <option value="<?= $conduc->idConductor ?>"><?= $conduc->Documento ?></option>
+                                   
+                             <?php   } ?>
+                            </select>
 
                            
                         <button type="submit" class="btn btn-primary">Guardar</button>

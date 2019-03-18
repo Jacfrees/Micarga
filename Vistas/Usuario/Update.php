@@ -1,18 +1,11 @@
-<!DOCTYPE>
-<html>
-<head>
-    <title>EDITAR USUARIO</title>
-<body>
-<a href="index.php?c=Usuario&a=admin"><h4>Volver</h4></a>
-<h2 align="center" >Actualizar Usuario></h2>
+<?php include_once("Vistas/header.php"); ?>
 
+<div class="class1">
 
+<h2 align="center" >Actualizar Usuario</h2>
 
-<form method="post">
-<center>
-                            <br>
-                            <br>
-                            <br>
+<form method="post" autocomplete="off" class="container">
+                           
                             <label >Nombre</label>
                             <input maxlength="45" type="text"  name="Usuario[Nombre]" 
                             value="<?= $Usuario->Nombre ?>" required/>
@@ -35,11 +28,8 @@
                               <br>
                            
                         <button type="submit" class="btn btn-primary">Guardar</button>
-                        </center>
                         </form>
-                        <br><br><br>
+</div>                        
  
       
-
-</body>
-</html>
+<?php include_once("Vistas/footer.php"); ?>

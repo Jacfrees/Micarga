@@ -39,19 +39,18 @@ class VehiculoController{
 				$pr= $_POST["Vehiculo"]["PlacaRemolque"];
 				$ct= $_POST["Vehiculo"]["CapacidadTanque"];
 				$cp= $_POST["Vehiculo"]["CartaPropiedad"];
-				$idc= $_POST^["Vehiculo"]["Conductor_idConductor"];
+				$sec=$_POST["Vehiculo"]["Seccional"];
+				$idc= $_POST["Vehiculo"]["Conductor_idConductor"];
 				
 
 
 			$vehiculo = new Vehiculo();
-			$guardo = $vehiculo->save($pc,$m,$c,$pr,$ct,$cp,$idc);
+			$guardo = $vehiculo->save($pc,$m,$c,$pr,$ct,$cp,$sec,$idc);
 			if ($guardo){
 			    header("location:index.php?c=Vehiculo&a=admin");
 			}else{
 				echo"ocurrio un error al guardar";
 			}
-				
-		
 
 					require "Vistas/Vehiculo/admin.php";
 			}else{
@@ -78,6 +77,13 @@ class VehiculoController{
 	   		 private function update(){
 	   		 	$Vehiculo = new Vehiculo();
 	   		 	$Vehiculo->findByPk($_GET["id"]);
+	   		 	
+	   		 	$con = new Conductor();
+				$conductor = $con->admin();
+
+				$con = new Conductor();
+	   		 	$con->idVeh($_GET["id"]);
+
 
 	   		 	if (isset($_POST["Vehiculo"])){
 	   		 		$Vehiculo->PlacaCabezote=$_POST["Vehiculo"]["PlacaCabezote"];
@@ -86,7 +92,8 @@ class VehiculoController{
 	   		 		$Vehiculo->PlacaRemolque=$_POST["Vehiculo"]["PlacaRemolque"];
 	   		 		$Vehiculo->CapacidadTanque=$_POST["Vehiculo"]["CapacidadTanque"];
 	   		 		$Vehiculo->CartaPropiedad=$_POST["Vehiculo"]["CartaPropiedad"];
-	   		 	    $Vehiculo->Conductor_idConductor = $_POST["Vehiculo"]["Conductor_idConductor"];
+	   		 		$Vehiculo->Seccional=$_POST["Vehiculo"]["Seccional"];
+	   		 	    $Vehiculo->Conductor_idConductor=$_POST["Vehiculo"]["Conductor_idConductor"];
 
 
 
@@ -95,8 +102,7 @@ class VehiculoController{
 
 	   		 	}else{
 
-	   		 		$con = new Conductor();
-					$conductor = $con->admin();
+	   		 		
 
 	   		 		require "Vistas/Vehiculo/Update.php";
 	   		 	}
@@ -112,6 +118,12 @@ class VehiculoController{
 	   		 	}
 	   		 		
 	   		 }
+
+	   		 private function view(){ 
+				$Vehiculo= new Vehiculo(); 
+				$Vehiculo = $Vehiculo->view ($_POST['nhab']); 
+			require "Vistas/Vehiculo/Consultar.php"; 
+			}
     }
 
 	

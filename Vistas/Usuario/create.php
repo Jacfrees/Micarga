@@ -1,9 +1,9 @@
-  
+<?php include_once("Vistas/header.php"); ?>  
 
-                            <title>LISTADO DE USUARIOS</title>
-                            <div class="container">
+ <div class="class1">
+                                <h2><b><center> Registrar Usuario</b></center></h2>
 
-                            <form action="" method="post" class="">
+                            <form action="" method="post" class="container" autocomplete="off">
 
                             <label >Nombre</label>
                             <input maxlength="45" type="text"  name="Usuario[Nombre]"   value="" required/>
@@ -18,11 +18,13 @@
                             <input maxlength="45" type="text"  name="Usuario[Perfil]"   value="" required/>
                             <br>
                             <label>Password</label>
-                            <input maxlength="45" type="text"  name="Usuario[Password]"   value="" required/>
+                            <input maxlength="45" type="Password"  name="Usuario[Password]"   value="" required/>
                             <br>
                            
                             
                         <button type="reset" >Cancelar</button>
                         <button type="submit" class="btn btn-primary">Guardar</button>
                         </form>
-                        </div>
+</div>                          
+
+  <?php include_once("Vistas/footer.php"); ?>                      
