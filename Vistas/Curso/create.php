@@ -17,9 +17,9 @@
 
                             <label>Conductor</label>
                             <select name="Curso[Conductor_idConductor]"required="" >
-                                <option>Conductor</option>
-                                <?php foreach ($conductor as $conduc ) {?>
-                                    <option value="<?= $conduc->idConductor ?>"><?= $conduc->Cedula ?></option>
+                            <option>Conductor</option>
+                            <?php foreach ($conductor as $conduc ) {?>
+                            <option value="<?= $conduc->idConductor ?>"><?= $conduc->Documento ?></option>
                                    
                              <?php   } ?>
                             </select>

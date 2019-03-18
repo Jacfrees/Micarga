@@ -6,7 +6,6 @@
  
                         <table align="center"  border="1" class="container">
                         <tr>
-                        <th >id</th>
                         <th >Tipo</th>
                         <th >Fecha Renovacion</th>
                         <th >Fecha Vencimiento</th>
@@ -20,7 +19,6 @@
 
 
             <tr> 
-            <td><?= $doc->idDocumento; ?></td>
             <td><?= $doc->Tipo;?></td>
             <td><?= $doc->FechaRenovacion;?></td>
             <td><?= $doc->FechaVencimiento;?></td>

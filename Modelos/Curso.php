@@ -44,6 +44,7 @@ public function update (){
 	$stm->bindparam(":FechaInicio",$this->FechaInicio);
 	$stm->bindparam(":FechaVencimiento",$this->FechaVencimiento);
 	$stm->bindparam(":Conductor_idConductor",$this->Conductor_idConductor);
+	$stm->bindparam(":id",$this->idCurso);
 
 		$stm->execute();
 }
