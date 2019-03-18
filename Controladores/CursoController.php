@@ -75,8 +75,8 @@ class CursoController{
 	   		 	$con = new Conductor();
 				$conductor = $con->admin();
 
-				$con = new Conductor();
-	   		 	$con->idVeh($_GET["id"]);
+				//$con = new Conductor();
+	   		 	//$con->idVeh($_GET["id"]);
 
 
 	   		 	if (isset($_POST["Curso"])){

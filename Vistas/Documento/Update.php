@@ -17,7 +17,7 @@
                             <input maxlength="45" type="text" name="Documento[FechaRenovacion]"   
                             value="<?= $Documento->FechaRenovacion ?>" required/>
                              <br>
-                           <label >Fecha Vencimiento</label>
+                            <label >Fecha Vencimiento</label>
                             <input maxlength="45" type="text"  name="Documento[FechaVencimiento]"  
                             value="<?= $Documento->FechaVencimiento ?>" required/>
                             <br>
@@ -25,11 +25,12 @@
                             <input maxlength="45" type="text"  name="Documento[Numero]"   
                             value="<?= $Documento->Numero ?>" required/>
                             <br>
-                    
-                            <select name="Documento[Vehiculo_idVehiculo]"required="">
-                                <option value="<?= $veh->idVehiculo ?>"> <?= $veh->Modelo ?></option>
-                                <?php foreach ($vehiculo as $vehi ) {?>
-                                    <option value="<?= $vehi->idVehiculo ?>"><?= $vehi->Modelo ?></option>
+                            
+                            <label >Vehiculo</label>    
+                            <select name="Documento[Vehiculo_idVehiculo]"required="" value="<?= $Documento->Vehiculo_idVehiculo ?>">
+                            <option value="<?= $veh->idVehiculo ?>"> <?= $veh->Modelo ?></option>
+                            <?php foreach ($vehiculo as $vehi ) {?>
+                            <option value="<?= $vehi->idVehiculo ?>"><?= $vehi->Modelo ?></option>
                                    
                              <?php   } ?>
                             </select>

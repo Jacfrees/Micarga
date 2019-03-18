@@ -77,10 +77,11 @@ class DocumentoController{
 	   		 	$Documento->findByPk($_GET["id"]);
 
 	   		 	$veh = new Vehiculo();
+	   		 	$veh->findByPk($Documento->Vehiculo_idVehiculo);
 				$vehiculo = $veh->admin();
 
-				$veh = new Vehiculo();
-				$veh->idVeh($_GET["id"]);
+				//$veh = new Vehiculo();
+				//$veh->idVeh($_GET["id"]);
 
 
 
