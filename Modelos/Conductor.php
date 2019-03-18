@@ -76,9 +76,10 @@ public function findByDocument($doc){
 
 public function idVeh($id){
 	$Conexion = $this->getConexion();
-	$stm = $Conexion->prepare("SELECT *FROM Conductor inner join Vehiculo 
+	$stm = $Conexion->prepare("SELECT * FROM Conductor inner join Vehiculo 
 		on Conductor.idConductor = Vehiculo.Conductor_idConductor =:id");
 	$stm->setFetchMode(PDO::FETCH_INTO,$this);
+
 
 	$stm->bindParam(":id",$id);
 	$stm-> execute();

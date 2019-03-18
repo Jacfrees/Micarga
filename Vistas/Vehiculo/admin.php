@@ -6,16 +6,15 @@
  
                         <table align="center"  border="1" class="container">
                         <tr>
-                        <th >id</th>
-                        <th >Placa Cabezote</th>
-                        <th >Modelo</th>
-                        <th >Color</th>
-                        <th >Placa Remolque</th>
-                        <th >Capacidad Tanque</th>
-                        <th >Carta Propiedad</th>
+                        <th>Placa Cabezote</th>
+                        <th>Modelo</th>
+                        <th>Color</th>
+                        <th>Placa Remolque</th>
+                        <th>Capacidad Tanque</th>
+                        <th>Carta Propiedad</th>
                         <th>Seccional</th>
-                        <th >Conductor</th>
-                        <th >Acciones</th>
+                        <th>Conductor</th>
+                        <th>Acciones</th>
                 
                         </tr>
                         <?php foreach ($vehiculo as $veh) {?>
@@ -23,7 +22,6 @@
 
 
             <tr> 
-            <td><?= $veh->idVehiculo; ?></td>
             <td><?= $veh->PlacaCabezote;?></td>
             <td><?= $veh->Modelo;?></td>
             <td><?= $veh->Color;?></td>

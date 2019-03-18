@@ -15,14 +15,16 @@
                                 <input maxlength="45" type="date"  name="Curso[FechaInicio]"   
                                 value="<?= $Curso->FechaInicio ?>" required/>
                                  <br>
-                               <label > Fecha Vencimiento</label>
+                                <label > Fecha Vencimiento</label>
                                 <input maxlength="45" type="date"  name="Curso[FechaVencimiento]" 
                                 value="<?= $Curso->FechaVencimiento ?>" required/>
                                 <br>
-                                 <select name="Vehiculo[Conductor_idConductor]"required="">
-                                <option value="<?= $con->idConductor ?>"> <?= $con->Cedula ?></option>
+
+                                <label>Conductor</label>
+                                <select name="Vehiculo[Conductor_idConductor]"required="" value="<?=$Curso->Conductor_idConductor ?>">
+                                 <option value="<?= $con->idConductor ?>"> <?= $con->Documento ?></option>
                                 <?php foreach ($conductor as $conduc ) {?>
-                                    <option value="<?= $conduc->idConductor ?>"><?= $conduc->Cedula ?></option>
+                                    <option value="<?= $conduc->idConductor ?>"><?= $conduc->Documento ?></option>
                                    
                              <?php   } ?>
                             </select>

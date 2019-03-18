@@ -19,11 +19,11 @@
                             <br>                            
                             <label>Vehiculo</label>
                             <select name="Documento[Vehiculo_idVehiculo]"required="" >
-                               <option>Vehiculo</option>
-                                <?php foreach ($vehiculo as $vehi ) {?>
-                                    <option value="<?= $vehi->idVehiculo ?>"><?= $vehi->Tipo ?></option>
+                            <option>Vehiculo</option>
+                            <?php foreach ($vehiculo as $vehi ) {?>
+                            <option value="<?= $vehi->idVehiculo ?>"><?= $vehi->Modelo ?></option>
                                    
-                             <?php   } ?>
+                            <?php   } ?>
                             </select>
                             <br>
                     

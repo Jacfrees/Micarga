@@ -79,10 +79,11 @@ class VehiculoController{
 	   		 	$Vehiculo->findByPk($_GET["id"]);
 	   		 	
 	   		 	$con = new Conductor();
+	   		 	$con->findByPk($Vehiculo->Conductor_idConductor);
 				$conductor = $con->admin();
 
-				$con = new Conductor();
-	   		 	$con->idVeh($_GET["id"]);
+				//$con = new Conductor();
+	   		 	//$con->idVeh($_GET["id"]);
 
 
 	   		 	if (isset($_POST["Vehiculo"])){

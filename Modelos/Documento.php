@@ -50,6 +50,7 @@ public function save($tip,$fere,$feve,$num,$idv){
 	$stm->bindparam(":FechaVencimiento",$this->FechaVencimiento);
 	$stm->bindparam(":Numero",$this->Numero);
 	$stm->bindparam(":Vehiculo_idVehiculo",$this->Vehiculo_idVehiculo);
+	$stm->bindparam(":id",$this->idDocumento);
 
 	$stm->execute();
 

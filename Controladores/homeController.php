@@ -32,33 +32,29 @@ require_once("Modelos/Usuario.php"); //requerimos todo el modelo usuarios para p
 			if (isset($_POST["Login"])) { //aqui el login si el documento y la contraseña son verdaderos entonces nos dejara ingresar al home!
 				$documento = $_POST["Login"]["Documento"];
 				$Contrasena = $_POST["Login"]["Contrasena"];
-				$Usuario = new Usuarios();
+				$Usuario = new Usuario();
 				$Usuario->findbydocument($documento);
 				if (password_verify( $Contrasena,$Usuario->Contrasena)) {
 					$_SESSION["Usuarios"]= $Usuario;
 					$_SESSION["Perfil"]= $Usuario;
-
-				//	$_SESSION["id"]= $usuario->id_usuario;
-		
 					if ($_SESSION["Perfil"]!="Administrador"  ) {
 						header("location:index.php?c=home");
-
-						
-						
-					}else header("location:index.php?c=home&a=home");
-					
-						
+	
 				}else{
-					header("location:index.php?$c=home&a=Login&error=true");//y si es incorrecta la contraseña  entonces nos dara error y nos volvera al login!
+					$_SESSION["Perfil"] != "Empleado";
+					header("location: index.php?c=home&a=home"); 
 				}
-				require "Login.php";
-
+			}else{
+				header("location:index.php?$c=home&a=Login&error=true");//y si es incorrecta la contraseña  entonces nos dara error y nos volvera al login!
 			}
-		//private function logout(){
-			//session_destroy();
-			//header("location:login.php");//aqui se cerrara el inicio de sesion y nos volvera al login!
-		//}
-
+		}else{
+			require "Vistas/home/home/Login.php";
 		}
+	}	
+		private function logout(){
+			session_destroy();
+			header("location: index.php?c=home&a=login");
+		}
+	
 }
 ?>

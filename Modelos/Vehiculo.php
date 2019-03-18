@@ -59,6 +59,7 @@ public function save($pc,$m,$c,$pr,$ct,$cp,$sec,$idc){
 	$stm->bindParam(":CartaPropiedad",$this->CartaPropiedad);
 	$stm->bindparam(":Seccional",$this->Seccional);
 	$stm->bindparam(":Conductor_idConductor",$this->Conductor_idConductor);
+	$stm->bindparam(":id",$this->idVehiculo);
 
 	$stm->execute();
 
