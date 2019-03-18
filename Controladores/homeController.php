@@ -54,10 +54,10 @@ require_once("Modelos/Usuario.php"); //requerimos todo el modelo usuarios para p
 				require "Login.php";
 
 			}
-		private function logout(){
-			session_destroy();
-			header("location:login.php");//aqui se cerrara el inicio de sesion y nos volvera al login!
-		}
+		//private function logout(){
+			//session_destroy();
+			//header("location:login.php");//aqui se cerrara el inicio de sesion y nos volvera al login!
+		//}
 
 		}
 }
