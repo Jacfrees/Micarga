@@ -1,13 +1,10 @@
-<!DOCTYPE>
-<html>
-<head>
-	<title>EDITAR DOCUMENTO</title>
-<body>
-<a href="index.php?c=Documento&a=admin"><h4>Volver</h4></a>
-<h2 align="center" >Actualizar Vehiculo</h2>
+<?php include_once("Vistas/header.php"); ?>
 
-<form method="post">
-<center>
+<div class="class1">
+
+<h2 align="center" >Actualizar Documentos</h2>
+
+<form method="post" class="container" autocomplete="off>
                           
                             <label >Tipo</label>
                             <input maxlength="45" type="text"  name="Documento[Tipo]" 
@@ -34,13 +31,10 @@
                                    
                              <?php   } ?>
                             </select>
+                            <br>
 
                         <button type="submit" class="btn btn-primary">Guardar</button>
-                        </center>
                         </form>
-                        <br><br><br>
+</div>                       
  
-      
-
-</body>
-</html>
+<?php include_once("Vistas/footer.php"); ?>

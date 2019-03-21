@@ -20,16 +20,8 @@
     <td><?= $ss->Conduc->Documento;?></td>
    
     <td >
-
-       
-
-            <button>
-                <a href="index.php?c=Curso&a=update&id=<?= $ss->idCurso; ?>"> Editar</a>
-                
-            </button>
-            <button>
-                <a href="index.php?c=Curso&a=delete&id=<?=$ss->idCurso; ?>"> Eliminar</a>
-            </button>
+                <a href="index.php?c=Curso&a=update&id=<?= $ss->idCurso; ?>" class="boton_personalizado2"> Editar</a>
+                <a href="index.php?c=Curso&a=delete&id=<?=$ss->idCurso; ?>" class="boton_personalizado1"> Eliminar</a>
           
             </td>
     </tr>

@@ -22,15 +22,9 @@
     <td><?= $ss->VenLicencia;?></td>
     <td >
 
-       
-
-            <button>
-                <a href="index.php?c=Conductor&a=update&id=<?= $ss->idConductor; ?>"> Editar</a>
+                <a href="index.php?c=Conductor&a=update&id=<?= $ss->idConductor; ?>" class="boton_personalizado2"> Editar</a>
                 
-            </button>
-            <button>
-                <a href="index.php?c=Conductor&a=delete&id=<?=$ss->idConductor; ?>"> Eliminar</a>
-            </button>
+                <a href="index.php?c=Conductor&a=delete&id=<?=$ss->idConductor; ?>" class="boton_personalizado1"> Eliminar</a>
           
             </td>
     </tr>

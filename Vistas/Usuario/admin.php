@@ -22,18 +22,9 @@
     <td><?= $us->Perfil;?></td>
     <td><?= $us->Password;?></td>
     <td >
-
-       
-
-            <button>
-                <a href="index.php?c=Usuario&a=update&id=<?= $us->idUsuario; ?>"> Editar</a>
-                
-            </button>
-            <button>
-                <a href="index.php?c=Usuario&a=delete&id=<?=$us->idUsuario; ?>"> Eliminar</a>
-            </button>
-          
-            </td>
+                <a href="index.php?c=Usuario&a=update&id=<?= $us->idUsuario; ?>" class="boton_personalizado2"> Editar</a>
+                <a href="index.php?c=Usuario&a=delete&id=<?=$us->idUsuario; ?>" class="boton_personalizado1"> Eliminar</a>
+    </td>
     </tr>
 
     <?php } ?>

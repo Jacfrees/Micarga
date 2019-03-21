@@ -26,17 +26,10 @@
             <td><?= $doc->vehi->Modelo;?></td>
             
             <td >
-             
-            <button>
-                <a href="index.php?c=Documento&a=update&id=<?= $doc->idDocumento; ?>">Editar</a>
-                 
-            </button>
-            <button>
-                <a href="index.php?c=Documento&a=delete&id=<?=$doc->idDocumento; ?>">Eliminar</a>
-                 
-            </button>
-
-      
+                <a href="index.php?c=Documento&a=update&id=<?= $doc->idDocumento; ?>" class="boton_personalizado2">Editar</a>
+           
+                <a href="index.php?c=Documento&a=delete&id=<?=$doc->idDocumento; ?>" class="boton_personalizado1">Eliminar</a>
+            
             </td>
             </tr>
 
