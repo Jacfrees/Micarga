@@ -21,7 +21,7 @@
                                 <br>
 
                                 <label>Conductor</label>
-                                <select name="Vehiculo[Conductor_idConductor]"required="" value="<?=$Curso->Conductor_idConductor ?>">
+                                <select name="Curso[Conductor_idConductor]"required="" value="<?=$Curso->Conductor_idConductor ?>">
                                  <option value="<?= $con->idConductor ?>"> <?= $con->Documento ?></option>
                                 <?php foreach ($conductor as $conduc ) {?>
                                     <option value="<?= $conduc->idConductor ?>"><?= $conduc->Documento ?></option>

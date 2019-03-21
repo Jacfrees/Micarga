@@ -90,8 +90,11 @@ class UsuarioController{
 
 	   		 private function view(){ 
 				$Usuario= new Usuario(); 
-				$Usuario = $Usuario->view ($_POST['nhab']); 
-			require "Vistas/Usuario/Consultar.php"; 
+				if($_POST['usu']!= "")
+				$Usuario = $Usuario->view ($_POST['usu']); 
+			    else
+			    	$Usuario = $Usuario->Listar();
+			require "Vistas/Usuario/admin.php"; 
 			}
 
 		

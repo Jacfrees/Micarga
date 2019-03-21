@@ -97,9 +97,9 @@ public function delete($id){
 			return $usua;
 
 }
-		public function view($Id) { 
+		public function view($id) { 
             $Conexion =$this->getConexion(); 
-			$stm = $Conexion->prepare("SELECT * FROM Usuario WHERE Documento = :id"); 
+			$stm = $Conexion->prepare("SELECT * FROM Usuario WHERE Documento = :id or Nombre = :id or Telefono = :id or Perfil = :id "); 
             $stm->bindParam(":id", $id); 
 			$stm->setFetchMode(PDO::FETCH_CLASS,'Usuario'); 
  
@@ -112,6 +112,7 @@ public function delete($id){
 			return $Usuario; 
                 
 		}
+		
 
 }
 

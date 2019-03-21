@@ -73,6 +73,7 @@ class CursoController{
 	   		 	$Curso->findByPk($_GET["id"]);
 
 	   		 	$con = new Conductor();
+	   		 	$con->findByPk($Curso->Conductor_idConductor);
 				$conductor = $con->admin();
 
 				//$con = new Conductor();

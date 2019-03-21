@@ -8,7 +8,7 @@
                         <th >Nombre</th>
                         <th >Fecha Inicio</th>
                         <th >Fecha Vencimiento</th>
-                         <th>Conductor</th>
+                        <th>Conductor</th>
                         <th >Acciones</th>
                         </tr>
             <?php foreach($Curso as $ss) {?>

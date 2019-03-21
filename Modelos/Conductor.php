@@ -86,6 +86,17 @@ public function idVeh($id){
 	$stm->fetch();
 }
 
+public function idCur($id){
+	$Conexion = $this->getConexion();
+	$stm = $Conexion->prepare("SELECT * FROM Conductor inner join Curso 
+		on Conductor.idConductor = Curso.Conductor_idConductor =:id");
+	$stm->setFetchMode(PDO::FETCH_INTO,$this);
+
+
+	$stm->bindParam(":id",$id);
+	$stm-> execute();
+	$stm->fetch();
+}
 
 public function delete($id){
 			$Conexion =$this->getConexion();
