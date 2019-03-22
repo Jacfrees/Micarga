@@ -32,17 +32,8 @@
             <td><?= $veh->Conduc->Documento;?></td>
             
             <td >
-             
-            <button>
-                <a href="index.php?c=Vehiculo&a=update&id=<?= $veh->idVehiculo; ?>">Editar</a>
-                 
-            </button>
-            <button>
-                <a href="index.php?c=Vehiculo&a=delete&id=<?=$veh->idVehiculo; ?>">Eliminar</a>
-                 
-            </button>
-
-      
+                <a href="index.php?c=Vehiculo&a=update&id=<?= $veh->idVehiculo; ?>" class="boton_personalizado2">Editar</a>
+                <a href="index.php?c=Vehiculo&a=delete&id=<?=$veh->idVehiculo; ?>" class="boton_personalizado1">Eliminar</a>
             </td>
             </tr>
 

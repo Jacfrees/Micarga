@@ -10,10 +10,9 @@ require_once("Modelos/Usuario.php"); //requerimos todo el modelo usuarios para p
 				case "home":
 					$_this->home();
 					break;
-				case "Login":
+				case "login":
 				    $_this->login();
 				    break;	
-	
 				case "logout":
 					$_this->logout();
 					break;	
@@ -23,7 +22,7 @@ require_once("Modelos/Usuario.php"); //requerimos todo el modelo usuarios para p
 			}
 		}
 		private function home(){
-			require "Vistas/home/home.php";//aqui requerimos todo la vista de home!
+			require "Vistas/home.php";//aqui requerimos todo la vista de home!
 		}
 
 		private function Login(){
@@ -48,7 +47,7 @@ require_once("Modelos/Usuario.php"); //requerimos todo el modelo usuarios para p
 				header("location:index.php?$c=home&a=Login&error=true");//y si es incorrecta la contraseña  entonces nos dara error y nos volvera al login!
 			}
 		}else{
-			require "Vistas/home/home/Login.php";
+			require "Vistas/home.php";
 		}
 	}	
 		private function logout(){

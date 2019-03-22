@@ -11,39 +11,39 @@
 
 			<!-- Header -->
 				<header id="header">
-					<h1 id="logo"><a href="index.html">MI CARGA</a></h1>
+					<h1 id="logo"><a href="index.html" >MI CARGA</a></h1>
 					<nav id="nav">
 						<ul>
-							<li><a href="Vistas/home.php">HOME</a></li>
+							<li><a href="Vistas/home.php" class="hh">HOME</a></li>
 							<li>
-								<a href="#">REGISTROS</a>
+								<a href="#" class="hh">REGISTROS</a>
 								<ul>
-									<li><a href="index.php?c=Usuario&a=create">USUARIO</a></li>
-									<li><a href="index.php?c=Conductor&a=create">CONDUCTOR</a></li>
-									<li><a href="index.php?c=Vehiculo&a=create">VEHICULO</a></li>
+									<li><a href="index.php?c=Usuario&a=create" class="hh">USUARIO</a></li>
+									<li><a href="index.php?c=Conductor&a=create" class="hh">CONDUCTOR</a></li>
+									<li><a href="index.php?c=Vehiculo&a=create" class="hh">VEHICULO</a></li>
 									
 									<li>
-										<a href="#">VENCIMIENTOS</a>
+										<a href="#" class="hh">VENCIMIENTOS</a>
 										<ul>
-											<li><a href="index.php?c=Documento&a=create">Documentos</a></li>
-											<li><a href="index.php?c=Curso&a=create">Cursos</a></li>
+											<li><a href="index.php?c=Documento&a=create" class="hh">Documentos</a></li>
+											<li><a href="index.php?c=Curso&a=create" class="hh">Cursos</a></li>
 											
 										</ul>
 									</li>
 								</ul>
 							</li>
 							<li>
-								<a href="#">LISTADOS</a>
+								<a href="#" class="hh">LISTADOS</a>
 								<ul>
-									<li><a href="index.php?c=Usuario&a=admin">USUARIO</a></li>
-									<li><a href="index.php?c=Conductor&a=admin">CONDUCTOR</a></li>
-									<li><a href="index.php?c=Vehiculo&a=admin">VEHICULO</a></li>
+									<li><a href="index.php?c=Usuario&a=admin" class="hh">USUARIO</a></li>
+									<li><a href="index.php?c=Conductor&a=admin" class="hh">CONDUCTOR</a></li>
+									<li><a href="index.php?c=Vehiculo&a=admin" class="hh">VEHICULO</a></li>
 									
 									<li>
-										<a href="#">VENCIMIENTOS</a>
+										<a href="#" class="hh">VENCIMIENTOS</a>
 										<ul>
-											<li><a href="index.php?c=Documento&a=admin">Documentos</a></li>
-											<li><a href="index.php?c=Curso&a=admin">Cursos</a></li>
+											<li><a href="index.php?c=Documento&a=admin" class="hh">Documentos</a></li>
+											<li><a href="index.php?c=Curso&a=admin" class="hh">Cursos</a></li>
 											
 										</ul>
 									</li>

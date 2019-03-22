@@ -27,8 +27,8 @@
                             </select>
                             <br>
                     
-                            <button type="reset" >Cancelar</button>
-                            <button type="submit" class="btn btn-primary">Guardar</button>
+                            <button type="reset" class="boton_personalizado4">Cancelar</button>
+                            <button type="submit" class="boton_personalizado3">Guardar</button>
                             </form>
 </div>
 <?php include_once("Vistas/footer.php"); ?>

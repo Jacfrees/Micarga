@@ -9,7 +9,7 @@
 
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
-pre, a, abbr, acronym, address, big, cite,
+pre, abbr, acronym, address, big, cite,
 code, del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var, b,
 u, i, center, dl, dt, dd, ol, ul, li, fieldset,
@@ -104,21 +104,6 @@ input, select, textarea {
 		font-weight: 100;
 		line-height: 1.75em;
 	}
-
-	a {
-		-moz-transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
-		-webkit-transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
-		-ms-transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
-		transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
-		border-bottom: dotted 1px;
-		color: #e44c65;
-		text-decoration: none;
-	}
-
-		a:hover {
-			color: #e44c65 !important;
-			border-bottom-color: transparent;
-		}
 
 	strong, b {
 		color: #ffffff;
@@ -4078,3 +4063,85 @@ input, select, textarea {
 	margin-top: 70px;
 	margin-bottom: 70px;
 }
+
+.boton_personalizado1{
+    text-decoration: none;
+    padding-bottom: 2px;
+    padding-top: 2px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #ffffff;
+    background-color: #dc3545;
+    border-radius: 6px;
+    border: 1px solid #dc3545;
+  }
+  .boton_personalizado1:hover{
+    color: #dc3545;
+    background-color: #e2e2e2;
+  }
+  
+  .boton_personalizado2{
+    text-decoration: none;
+    padding-bottom: 2px;
+    padding-top: 2px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #ffffff;
+    background-color: #5480f1;
+    border-radius: 6px;
+    border: 1px solid #5480f1;
+  }
+  .boton_personalizado2:hover{
+    color: #1883ba;
+    background-color: #e2e2e2;
+  }
+
+.hh {
+		-moz-transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
+		-webkit-transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
+		-ms-transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
+		transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
+		border-bottom: dotted 1px;
+		color: #e44c65;
+		text-decoration: none;
+	}
+
+.hh:hover {
+	color: #e44c65 !important;
+	border-bottom-color: transparent;
+	text-decoration: none;
+	}
+
+.boton_personalizado3{
+    text-decoration: none;
+    padding-bottom: 7px;
+    padding-top: 7px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #ffffff;
+    background-color: #39c088;
+    border-radius: 6px;
+    border: 1px solid #39c088;
+    font-size: 16px;
+  }
+  .boton_personalizado3:hover{
+    color: #ffffff;
+    background-color: #41d095;
+  }	
+
+.boton_personalizado4{
+    text-decoration: none;
+    padding-bottom: 7px;
+    padding-top: 7px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #ffffff;
+    background-color: #e44c65;
+    border-radius: 6px;
+    border: 1px solid #e44c65;
+    font-size: 16px;
+  }
+  .boton_personalizado4:hover{
+    color: #ffffff;
+    background-color: #e76278;
+  }	  
