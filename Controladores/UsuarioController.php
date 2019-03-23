@@ -93,7 +93,7 @@ class UsuarioController{
 				if($_POST['usu']!= "")
 				$Usuario = $Usuario->view ($_POST['usu']); 
 			    else
-			    	$Usuario = $Usuario->Listar();
+			    	$Usuario = $Usuario->admin();
 			require "Vistas/Usuario/admin.php"; 
 			}
 

@@ -5,7 +5,7 @@
 						
 						
 						
-						<span class="image"><img src="images/pic01.jpg" alt="" /></span>
+						
 					</div>
 					<a href="#one" class="goto-next scrolly">Next</a>
 				</section>
