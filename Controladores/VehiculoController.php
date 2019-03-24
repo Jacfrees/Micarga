@@ -120,11 +120,7 @@ class VehiculoController{
 	   		 		
 	   		 }
 
-	   		 private function view(){ 
-				$Vehiculo= new Vehiculo(); 
-				$Vehiculo = $Vehiculo->view ($_POST['nhab']); 
-			require "Vistas/Vehiculo/Consultar.php"; 
-			}
+	   		
     }
 
 	

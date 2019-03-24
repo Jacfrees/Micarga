@@ -97,21 +97,8 @@ public function delete($id){
 			return $usua;
 
 }
-		public function view($Id) { 
-            $Conexion =$this->getConexion(); 
-			$stm = $Conexion->prepare("SELECT * FROM Usuario WHERE Documento = :id"); 
-            $stm->bindParam(":id", $id); 
-			$stm->setFetchMode(PDO::FETCH_CLASS,'Usuario'); 
- 
-			$Usuario = array(); 
-			$stm->execute(); 
- 
-			while ($obj = $stm->fetch()) { 
-				$Usuario[]=$obj; 
-			} 
-			return $Usuario; 
-                
-		}
+		
+		
 
 }
 

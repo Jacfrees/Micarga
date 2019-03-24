@@ -112,14 +112,8 @@ class DocumentoController{
 	   		 	}else{
 	   		 		header("Location:index.php?c=Documento&a=admin");
 	   		 	}
-	   		 		
-	   		 }
-	   	     private function view(){ 
-				$Documento= new Documento(); 
-				$Documento = $Documento->view ($_POST['nhab']); 
-			require "Vistas/Documento/Consultar.php"; 
-			}
-    }
+} 	     
+}
 
 ?>
 

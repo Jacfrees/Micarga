@@ -16,7 +16,7 @@
       <th scope="col">Documento</th> 
       <th scope="col">Telefono</th> 
       <th scope="col">Perfil</th> 
-      <th scope="col">Password</th> 
+       
      
       
     </tr> 
@@ -26,8 +26,9 @@
       <td><?= $us->Nombre; ?></td> 
       <td><?= $us->Documento; ?></td> 
       <td><?= $us->Telefono; ?></td> 
-      <td><?= $us->Perfil; ?></td> 
-      <td><?= $us->Password; ?></td> 
+      <td><?= $us->Perfil; ?></td>
+      <td><a href="index.php?c=Usuario&a=update&id=<?= $Usuario->id_Usuario; ?>">Editar</a></td>
+      
        
     </tr> 
     <?php } ?> 

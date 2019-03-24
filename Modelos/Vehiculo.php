@@ -104,21 +104,7 @@ public function save($pc,$m,$c,$pr,$ct,$cp,$sec,$idc){
 			return $Vehiculo;
 
 }
-	public function view($Id) { 
-            $Conexion =$this->getConexion(); 
-			$stm = $Conexion->prepare("SELECT * FROM Vehiculo WHERE PlacaCabezote = :id"); 
-            $stm->bindParam(":id", $id); 
-			$stm->setFetchMode(PDO::FETCH_CLASS,'Vehiculo'); 
- 
-			$Vehiculo = array(); 
-			$stm->execute(); 
- 
-			while ($obj = $stm->fetch()) { 
-				$Vehiculo[]=$obj; 
-			} 
-			return $Vehiculo; 
-                
-		}
+	
 }
 
 ?>

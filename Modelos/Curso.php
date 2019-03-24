@@ -45,8 +45,7 @@ public function update (){
 	$stm->bindparam(":FechaVencimiento",$this->FechaVencimiento);
 	$stm->bindparam(":Conductor_idConductor",$this->Conductor_idConductor);
 	$stm->bindparam(":id",$this->idCurso);
-
-		$stm->execute();
+    $stm->execute();
 }
 
 public function findBypk($id){
@@ -86,21 +85,7 @@ public function delete($id){
 			return $Curso;
 }
 
-   public function view($Id) { 
-            $Conexion =$this->getConexion(); 
-			$stm = $Conexion->prepare("SELECT * FROM Curso WHERE Nombre = :id"); 
-            $stm->bindParam(":id", $id); 
-			$stm->setFetchMode(PDO::FETCH_CLASS,'Nombre'); 
- 
-			$Curso = array(); 
-			$stm->execute(); 
- 
-			while ($obj = $stm->fetch()) { 
-				$Curso[]=$obj; 
-			} 
-			return $Curso; 
-                
-		}
+  
 }
 
 ?>

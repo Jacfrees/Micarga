@@ -41,6 +41,7 @@
                             <option value="<?= $Vehiculo->Seccional ?>">Yopal</option>
                             </select><br><br>
 
+                            <label>Conductor:</label>
                             <select name="Vehiculo[Conductor_idConductor]"required="" value="<?= $Vehiculo->Conductor_idConductor ?>">
                                 <option value="<?= $con->idConductor ?>"> <?= $con->Documento ?></option>
                                 <?php foreach ($conductor as $conduc ) {?>
