@@ -122,20 +122,7 @@ public function delete($id){
 			return $ms;
 }
 
-	public function view($Id) { 
-            $Conexion =$this->getConexion(); 
-			$stm = $Conexion->prepare("SELECT * FROM Conductor WHERE Documento = :id"); 
-            $stm->bindParam(":id", $id); 
-			$stm->setFetchMode(PDO::FETCH_CLASS,'Conductor'); 
- 
-			$Conductor = array(); 
-			$stm->execute(); 
- 
-			while ($obj = $stm->fetch()) { 
-				$Conductor[]=$obj; 
-			} 
-			return $Conductor;               
-	}
+	
 }
 
 ?>

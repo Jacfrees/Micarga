@@ -50,9 +50,7 @@
 
 							</ul>
 							</li>
-							<li>
-								<a href="#" class="hh">BUSCAR</a>
-							</li>
+							
 							
 							<li><a href="#" class="button primary">CERRAR SESION</a></li>
 						</ul>

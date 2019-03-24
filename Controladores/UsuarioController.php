@@ -88,15 +88,7 @@ class UsuarioController{
 	   		 	}
 	   		 }
 
-	   		 private function view(){ 
-				$Usuario= new Usuario(); 
-				if($_POST['usu']!= "")
-				$Usuario = $Usuario->view ($_POST['usu']); 
-			    else
-			    	$Usuario = $Usuario->admin();
-			require "Vistas/Usuario/admin.php"; 
-			}
-
+	   		 
 		
 
 	}
