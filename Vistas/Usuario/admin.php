@@ -1,15 +1,16 @@
 <?php include_once("Vistas/header.php"); ?>
 <div class="class1">
 <form role="form" >
+    <h2><b><center> Listado De Usuarios</b></center></h2>
+                        
             <div >
              
-                <input width="10px;" height="10px;" autocomplete="off"  id="searchTerm" type="text" onkeyup="doSearch()" name="query" placeholder="Buscar">
+                <input class="container" autocomplete="off"  id="searchTerm" type="text" onkeyup="doSearch()" name="query" placeholder="Buscar">
               
             </div>
   </form>
 
-                        <h2><b><center> Listado De Usuarios</b></center></h2>
-                        <br>
+                        
                        
                         <table align="center" id="datos" border="1" class="container">
                         <tr>

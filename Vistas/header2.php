@@ -18,7 +18,7 @@
 
 			<!-- Header -->
 				<header id="header">
-					<h1 id="logo"><a href="index.html">MI CARGA</a></h1>
+					<img src="../images/LOGO.png" style="width: 500px; height: 70px; padding-left: 10px; padding-top: 2px;">
 					<nav id="nav">
 						<ul>
 							<li><a href="home.php" class="hh">HOME</a></li>

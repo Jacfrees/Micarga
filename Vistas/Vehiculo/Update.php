@@ -1,13 +1,9 @@
-<!DOCTYPE>
-<html>
-<head>
-	<title>EDITAR VEHICULO</title>
-<body>
-<a href="index.php?c=Vehiculo&a=admin"><h4>Volver</h4></a>
+<?php include_once("Vistas/header.php"); ?>
+<div class="class1">
+
 <h2 align="center" >Actualizar Vehiculo</h2>
 
-<form method="post">
-<center>
+<form method="post" class="container">
                           
                             <label >Placa Cabezote</label>
                             <input maxlength="45" type="text"  name="Vehiculo[PlacaCabezote]" 
@@ -39,7 +35,8 @@
                             <option value="<?= $Vehiculo->Seccional ?>">Sogamoso</option>
                             <option value="<?= $Vehiculo->Seccional ?>">Corrales</option>
                             <option value="<?= $Vehiculo->Seccional ?>">Yopal</option>
-                            </select><br><br>
+                            </select>
+                             <br>
 
                             <label>Conductor:</label>
                             <select name="Vehiculo[Conductor_idConductor]"required="" value="<?= $Vehiculo->Conductor_idConductor ?>">
@@ -49,14 +46,10 @@
                                    
                              <?php   } ?>
                             </select>
-
+                            <br>
                            
-                        <button type="submit" class="btn btn-primary">Guardar</button>
-                        </center>
+                        <button type="submit" class="boton_personalizado4">Guardar</button>
                         </form>
-                        <br><br><br>
- 
-      
-
-</body>
-</html>
+                        
+ </div>
+      <?php include_once("Vistas/footer.php"); ?>

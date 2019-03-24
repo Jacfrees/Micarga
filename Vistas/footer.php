@@ -9,7 +9,9 @@
 						<li><a href="#" class="icon alt fa-envelope"><span class="label">Email</span></a></li>
 					</ul>
 					<ul class="copyright">
-						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						<li>&copy; TRANSPORTES MI CARGA SAS. ALL RIGHTS RESERVED. POWERED BY &SOURCE LTDA.</li>
+						<br><br>
+						<li>Contactenos llamando al PBX +57(8)7750649</li>
 					</ul>
 				</footer>
 

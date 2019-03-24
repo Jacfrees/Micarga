@@ -2,11 +2,9 @@
 
 
 <div class="class1">
-    <a href="index.php?c=Curso&a=admin"><h4>Volver</h4></a>
     <h2 align="center" >Actualizar Curso</h2>
 
     <form method="post" class="container" autocomplete="off">
-    <center>
                                 <label >Nombre</label>
                                 <input maxlength="45" type="text"  name="Curso[Nombre]" 
                                 value="<?= $Curso->Nombre ?>" required/>
@@ -30,7 +28,7 @@
                             </select>
                                
                                
-                            <button type="submit" class="btn btn-primary">Guardar</button>
+                            <button type="submit" class="boton_personalizado4">Guardar</button>
                             </form>
 </div>
  
