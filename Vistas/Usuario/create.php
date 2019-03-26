@@ -60,6 +60,14 @@
         }
     }
 </script>
+
+<script>
+//valida que no se repita un mismo registro
+function valida () {
+   
+    
+}
+</script>
 </div>                          
 
   <?php include_once("Vistas/footer.php"); ?>                      

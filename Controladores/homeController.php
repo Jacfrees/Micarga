@@ -24,10 +24,7 @@ require_once("Modelos/Usuario.php"); //requerimos todo el modelo usuarios para p
 		private function home(){
 			require "Vistas/home.php";//aqui requerimos todo la vista de home!
 		}
-		private function home(){
-			require "Vistas/home.php";
-		}
-
+		
 		private function Login(){
 			session_start();
 			if (isset($_POST["Login"])) { //aqui el login si el documento y la contraseña son verdaderos entonces nos dejara ingresar al home!

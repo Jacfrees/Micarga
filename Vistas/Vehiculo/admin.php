@@ -83,5 +83,8 @@
             }
         }
   </script>
+  <a href="Vistas/Vehiculo/files.php" class="btn btn-outline-dark" role="button" aria-pressed="true">
+        <img src="" alt="Subir carta propiedad">
+    </a>
 </div>    
 <?php include_once("Vistas/footer.php"); ?>
