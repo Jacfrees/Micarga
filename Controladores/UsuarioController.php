@@ -39,8 +39,11 @@ class UsuarioController{
 
 
 			$usuario = new Usuario();
-			$guardo = $usuario->save($nom,$doc,$tel,$per,$pass);
+			$encrip = password_hash($con, PASSWORD_DEFAULT);
+			$guardo = $usuario->save($nom,$doc,$tel,$per,$pass,$encrip);
+			//GUARDA EN LA BD
 			if ($guardo){
+				$_SESSION["documento"]=$Documento;
 			 	header("location:index.php?c=Usuario&a=admin");
 			}else{
 				echo"ocurrio un error al guardar";
@@ -68,7 +71,7 @@ class UsuarioController{
 	   		 		$Usuario->Documento=$_POST["Usuario"]["Documento"];
 	   		 		$Usuario->Telefono=$_POST["Usuario"]["Telefono"];
 	   		 		$Usuario->Perfil=$_POST["Usuario"]["Perfil"];
-	   		 		$Usuario->Password=$_POST["Usuario"]["Password"];
+	   		 		$Usuario->Password= password_hash($_POST["Usuario"]["Password"], PASSWORD_DEFAULT);
 
 	   		 		$Usuario-> update();
 	   		 		header("Location:index.php?c=Usuario&a=admin");
