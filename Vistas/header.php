@@ -14,7 +14,7 @@
 					<img src="images/LOGO.png" style="width: 500px; height: 70px; padding-left: 10px; padding-top: 2px;">
 					<nav id="nav">
 						<ul>
-							<li><a href="Vistas/home.php" class="hh">HOME</a></li>
+							<li><a href="index.php?c=home&a=home" class="hh">HOME</a></li>
 							<li>
 								<a href="#" class="hh">REGISTROS</a>
 								<ul>
@@ -57,3 +57,5 @@
 						
 					</nav>
 				</header>
+
+

@@ -12,7 +12,6 @@ class Vehiculo extends Conexion{
 	public $Color;
 	public $PlacaRemolque;
 	public $CapacidadTanque;
-	public $CartaPropiedad;
 	public $Seccional;
 	public $Conductor_idConductor;
 	
@@ -21,20 +20,19 @@ class Vehiculo extends Conexion{
 	parent::__construct();
 }
 
-public function save($pc,$m,$c,$pr,$ct,$cp,$sec,$idc){
+public function save($pc,$m,$c,$pr,$ct,$sec,$idc){
 
 	$this->PlacaCabezote=$pc;
 	$this->Modelo=$m;
 	$this->Color=$c;
 	$this->PlacaRemolque=$pr;
 	$this->CapacidadTanque=$ct;
-	$this->CartaPropiedad=$cp;
 	$this->Seccional=$sec;
 	$this->Conductor_idConductor=$idc;
 	
 
 	$Conexion = $this->getConexion();
-	$stm = $Conexion->prepare("INSERT INTO Vehiculo VALUES (:idVehiculo, :PlacaCabezote, :Modelo, :Color, :PlacaRemolque, :CapacidadTanque, :CartaPropiedad, :Seccional, :Conductor_idConductor)");
+	$stm = $Conexion->prepare("INSERT INTO Vehiculo VALUES (:idVehiculo, :PlacaCabezote, :Modelo, :Color, :PlacaRemolque, :CapacidadTanque , :Seccional, :Conductor_idConductor)");
 	
 	try{
 			return $stm->execute((array)$this);
@@ -49,14 +47,13 @@ public function save($pc,$m,$c,$pr,$ct,$cp,$sec,$idc){
 
     public function update (){
 	$Conexion = $this->getConexion();
-	$stm = $Conexion->prepare("UPDATE Vehiculo SET PlacaCabezote=:PlacaCabezote, Modelo=:Modelo, Color=:Color, PlacaRemolque=:PlacaRemolque, CapacidadTanque=:CapacidadTanque, CartaPropiedad=:CartaPropiedad, Seccional=:Seccional, Conductor_idConductor=:Conductor_idConductor WHERE idVehiculo=:id");
+	$stm = $Conexion->prepare("UPDATE Vehiculo SET PlacaCabezote=:PlacaCabezote, Modelo=:Modelo, Color=:Color, PlacaRemolque=:PlacaRemolque, CapacidadTanque=:CapacidadTanque, Seccional=:Seccional, Conductor_idConductor=:Conductor_idConductor WHERE idVehiculo=:id");
 
 	$stm->bindparam(":PlacaCabezote",$this->PlacaCabezote);
 	$stm->bindparam(":Modelo",$this->Modelo);
 	$stm->bindparam(":Color",$this->Color);
 	$stm->bindparam(":PlacaRemolque",$this->PlacaRemolque);
 	$stm->bindparam(":CapacidadTanque",$this->CapacidadTanque);
-	$stm->bindParam(":CartaPropiedad",$this->CartaPropiedad);
 	$stm->bindparam(":Seccional",$this->Seccional);
 	$stm->bindparam(":Conductor_idConductor",$this->Conductor_idConductor);
 	$stm->bindparam(":id",$this->idVehiculo);

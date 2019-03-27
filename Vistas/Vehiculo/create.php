@@ -20,10 +20,7 @@
                             <label>Capacidad Tanque</label>
                             <input maxlength="45" type="text"  name="Vehiculo[CapacidadTanque]"   value="" required/>
                             <br>
-                            <label>Carta Propiedad</label>
-                            <input maxlength="45" type="text"  name="Vehiculo[CartaPropiedad]"   value="" required/>
-                            <br>
-
+                            
                             <label>Seccional:</label>
                             <select name="Vehiculo[Seccional]" value="" required="">
                             <option value="">Seleccione una seccional</option>

@@ -7,7 +7,7 @@
 		<!--<link rel="stylesheet" href="../assets/css/owl.carousel.css">
 		<link rel="stylesheet" href="../assets/css/style.css">
 		<link rel="stylesheet" href="../assets/css/normalize.css">
-          <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
         <link rel="stylesheet" href="../assets/css/font-awesome.min.css">
         <link rel="stylesheet" href="../assets/css/responsive.css">-->
 
@@ -21,7 +21,7 @@
 					<img src="../images/LOGO.png" style="width: 500px; height: 70px; padding-left: 10px; padding-top: 2px;">
 					<nav id="nav">
 						<ul>
-							<li><a href="home.php" class="hh">HOME</a></li>
+							<li><a href="ndex.php?c=home&a=home" class="hh">HOME</a></li>
 						
 							<li>
 								<a href="#" class="hh">REGISTROS</a>

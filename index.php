@@ -1,6 +1,6 @@
 <?php
 
-$action = "admin";//accion por defecto
+$action = "home";//accion por defecto
 $controller = "home";//controlador por defecto 
 if (isset($_GET["a"])) 
 	$action = $_GET["a"];
@@ -44,4 +44,3 @@ switch ($controller) {
 	}
 
  ?>
- 
