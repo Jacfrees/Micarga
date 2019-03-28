@@ -2,16 +2,17 @@
 // Configuración 
 $folder = "uploads/"; // Carpeta a la que queremos subir los archivos 
 $maxlimit = 50000000; // Máximo límite de tamaño (en bits) 
-$allowed_ext = "rar,jpg,png,pdf,docx,xlsx"; // Extensiones permitidas (usad una coma para separarlas) 
+$allowed_ext = "pdf,docx,doc,xlsx,xls"; // Extensiones permitidas (usad una coma para separarlas) 
 $overwrite = "no"; // Permitir sobreescritura? (yes/no) 
 // creado por maracaiboenlinea.com 
 $match = "";  
+$error = "";
 $filesize = $_FILES['userfile']['size']; // toma el tamaño del archivo 
 $filename = strtolower($_FILES['userfile']['name']); // toma el nombre del archivo y lo pasa a minúsculas 
 
 
 if(!$filename || $filename==""){ // mira si no se ha seleccionado ningún archivo 
-   $error = "- Ningún archivo selecccionado para subir.<br>"; 
+   $error .= "- Ningún archivo selecccionado para subir.<br>"; 
 }elseif(file_exists($folder.$filename) && $overwrite=="no"){ // comprueba si el archivo existe ya 
    $error = "- El archivo <b>$filename</b> ya existe<br>"; 
 } 

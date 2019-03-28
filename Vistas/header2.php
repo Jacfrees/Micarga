@@ -58,7 +58,7 @@
 								</ul>
 							</li>
 
-							<li><a href="#" class="button primary">CERRAR SESIÓN</a></li>
+							<li><a href="index.php?c=home&a=logout" class="button primary">CERRAR SESIÓN</a></li>
 						</ul>
 					</nav>
 				</header>

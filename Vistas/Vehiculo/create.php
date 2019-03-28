@@ -2,7 +2,7 @@
 
  <div class="class1">
 
-<form method="post" autocomplete="off" class="container">
+<form method="post" autocomplete="off" class="container" action="upload.php" enctype="multipart/form-data">
 
                             <h2><b><center> Registrar Vehiculo</b></center></h2>
                             <label >Placa Cabezote</label>
@@ -27,10 +27,12 @@
                             <option value="Sogamoso">Sogamoso</option>
                             <option value="Corrales">Corrales</option>
                             <option value="Yopal">Yopal</option>
+                            </select><br>
 
-                            </select><br><br>   
-
-                            <br>                            
+                            <label>Subir carta propiedad:</label>
+                            <input type="file" name="userfile"> 
+                            <br><br>
+                                                        
                             <label>Conductor</label>
                             <select name="Vehiculo[Conductor_idConductor]"required="" >
                                 <option>Conductor</option>

@@ -28,14 +28,14 @@ require_once("Modelos/Usuario.php"); //requerimos todo el modelo usuarios para p
 		private function Login(){
 			session_start();
 			if (isset($_POST["Login"])) { // si el documento y la contraseña son verdaderos entonces nos dejara ingresar al home!
-				$documento = $_POST["Login"]["documento"];
+				$documento = $_POST["Login"]["Documento"];
 				$Contrasena = $_POST["Login"]["Contrasena"];
 
 				$Usuario = new Usuario();
 				$Usuario->findByDocument($documento);
-				if (password_verify( $Contrasena,$Usuario->Contrasena)) {
+				if (password_verify( $Contrasena,$Usuario->Password)) {
 					$_SESSION["Usuario"]= $Usuario;
-					$_SESSION["Perfil"]= $Usuario->perfil;
+					$_SESSION["Perfil"]= $Usuario->Perfil;
 					if ($_SESSION["Perfil"]!="Administrador"  ) {
 						header("location:index.php?c=home&a=home");
 	
@@ -44,10 +44,10 @@ require_once("Modelos/Usuario.php"); //requerimos todo el modelo usuarios para p
 					header("location: index.php?c=home&a=home");
 				}
 			}else{
-				header("location:index.php?$c=home&a=Login&error=true");//y si es incorrecta la contraseña  entonces nos dara error y nos volvera al login!
+				header("location:index.php?$c=home&a=login&error=true");//y si es incorrecta la contraseña  entonces nos dara error y nos volvera al login!
 			}
 		}else{
-			require "Vistas/Login.html";
+			require "Login.php";
 		}
 	}	
 		private function logout(){
