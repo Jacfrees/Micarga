@@ -6,7 +6,7 @@ require_once("Modelos/Usuario.php"); //requerimos todo el modelo usuarios para p
 
 	        $_this = new homeController();
 	        
-			switch ($action) { //aqui depediendo de la accion que se utilize nos manda al home o al login  o logout si no encuentra ninguna nos va a parecer accion no definida!  
+			switch ($action) { //dependiendo la accion que se le de nos envia a cualquiera de ellos.   
 				case "home":
 					$_this->home();
 					break;
@@ -17,37 +17,37 @@ require_once("Modelos/Usuario.php"); //requerimos todo el modelo usuarios para p
 					$_this->logout();
 					break;	
 				default:
-				    throw new Exception("Accion no definida");	
+			    throw new Exception("Accion no definida");	
 				
 			}
 		}
 		private function home(){
 			require "Vistas/home.php";//aqui requerimos todo la vista de home!
 		}
-
-		private function Login(){
-
 		
-			if (isset($_POST["Login"])) { //aqui el login si el documento y la contraseña son verdaderos entonces nos dejara ingresar al home!
-				$documento = $_POST["Login"]["Documento"];
+		private function Login(){
+			session_start();
+			if (isset($_POST["Login"])) { // si el documento y la contraseña son verdaderos entonces nos dejara ingresar al home!
+				$documento = $_POST["Login"]["documento"];
 				$Contrasena = $_POST["Login"]["Contrasena"];
+
 				$Usuario = new Usuario();
-				$Usuario->findbydocument($documento);
+				$Usuario->findByDocument($documento);
 				if (password_verify( $Contrasena,$Usuario->Contrasena)) {
-					$_SESSION["Usuarios"]= $Usuario;
-					$_SESSION["Perfil"]= $Usuario;
+					$_SESSION["Usuario"]= $Usuario;
+					$_SESSION["Perfil"]= $Usuario->perfil;
 					if ($_SESSION["Perfil"]!="Administrador"  ) {
-						header("location:index.php?c=home");
+						header("location:index.php?c=home&a=home");
 	
 				}else{
 					$_SESSION["Perfil"] != "Empleado";
-					header("location: index.php?c=home&a=home"); 
+					header("location: index.php?c=home&a=home");
 				}
 			}else{
 				header("location:index.php?$c=home&a=Login&error=true");//y si es incorrecta la contraseña  entonces nos dara error y nos volvera al login!
 			}
 		}else{
-			require "Vistas/home.php";
+			require "Vistas/Login.html";
 		}
 	}	
 		private function logout(){

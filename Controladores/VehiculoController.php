@@ -38,14 +38,13 @@ class VehiculoController{
 				$c= $_POST["Vehiculo"]["Color"];
 				$pr= $_POST["Vehiculo"]["PlacaRemolque"];
 				$ct= $_POST["Vehiculo"]["CapacidadTanque"];
-				$cp= $_POST["Vehiculo"]["CartaPropiedad"];
 				$sec=$_POST["Vehiculo"]["Seccional"];
 				$idc= $_POST["Vehiculo"]["Conductor_idConductor"];
 				
 
 
 			$vehiculo = new Vehiculo();
-			$guardo = $vehiculo->save($pc,$m,$c,$pr,$ct,$cp,$sec,$idc);
+			$guardo = $vehiculo->save($pc,$m,$c,$pr,$ct,$sec,$idc);
 			if ($guardo){
 			    header("location:index.php?c=Vehiculo&a=admin");
 			}else{
@@ -92,7 +91,6 @@ class VehiculoController{
 	   		 		$Vehiculo->Color=$_POST["Vehiculo"]["Color"];
 	   		 		$Vehiculo->PlacaRemolque=$_POST["Vehiculo"]["PlacaRemolque"];
 	   		 		$Vehiculo->CapacidadTanque=$_POST["Vehiculo"]["CapacidadTanque"];
-	   		 		$Vehiculo->CartaPropiedad=$_POST["Vehiculo"]["CartaPropiedad"];
 	   		 		$Vehiculo->Seccional=$_POST["Vehiculo"]["Seccional"];
 	   		 	    $Vehiculo->Conductor_idConductor=$_POST["Vehiculo"]["Conductor_idConductor"];
 

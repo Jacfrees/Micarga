@@ -38,7 +38,7 @@
     <?php } ?>
        
 	</table>
-  
+
    <script type="text/javascript">
         function doSearch()
         {
@@ -74,6 +74,7 @@
             }
         }
   </script>
+
 </div>    
  
 <?php include_once("Vistas/footer.php"); ?>

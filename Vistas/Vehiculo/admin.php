@@ -6,6 +6,7 @@
             <div >
              
                 <input class="container" autocomplete="off"  id="searchTerm" type="text" onkeyup="doSearch()" name="query" placeholder="Buscar">
+                <br>
               
             </div>
   </form>
@@ -19,7 +20,6 @@
                         <th>Color</th>
                         <th>Placa Remolque</th>
                         <th>Capacidad Tanque</th>
-                        <th>Carta Propiedad</th>
                         <th>Seccional</th>
                         <th>Conductor</th>
                         <th>Acciones</th>
@@ -35,7 +35,6 @@
             <td><?= $veh->Color;?></td>
             <td><?= $veh->PlacaRemolque;?></td>
             <td><?= $veh->CapacidadTanque;?></td>
-            <td><?= $veh->CartaPropiedad;?></td>
             <td><?= $veh->Seccional;?></td>
             <td><?= $veh->Conduc->Documento;?></td>
             
@@ -83,5 +82,6 @@
             }
         }
   </script>
-</div>    
+
+</div>   
 <?php include_once("Vistas/footer.php"); ?>
