@@ -26,14 +26,15 @@
                             value="<?= $Vehiculo->CapacidadTanque ?>" required/>
                             <br>
                             
+                           
                             <label>Seccional:</label>
-                            <select name="Vehiculo[Seccional]" value="" required="">
-                            <option value="">Seleccione una seccional</option>
-                            <option value="<?= $Vehiculo->Seccional ?>">Sogamoso</option>
-                            <option value="<?= $Vehiculo->Seccional ?>">Corrales</option>
-                            <option value="<?= $Vehiculo->Seccional ?>">Yopal</option>
+                            <select name="Vehiculo[Seccional]"  required="">
+                            <option value="<?= $Vehiculo->Seccional ?>"><?= $Vehiculo->Seccional ?></option>
+                            <option value="Sogamoso">Sogamoso</option>
+                            <option value="Corrales">Corrales</option>
+                            <option value="Yopal">Yopal</option>
                             </select>
-                             <br>
+                            <br>
 
                             <label>Conductor:</label>
                             <select name="Vehiculo[Conductor_idConductor]"required="" value="<?= $Vehiculo->Conductor_idConductor ?>">

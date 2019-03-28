@@ -1,7 +1,11 @@
 <?php include_once("Vistas/header.php"); ?>
 <div class="class1">
 <form role="form" >
-    <h2><b><center> Listado De Usuarios</b></center></h2>
+<h2><b><center> Listado De Usuarios</b></center></h2>
+<body>
+<link rel="stylesheet" href="https://unpkg.com/rmodal/dist/rmodal.css" type="text/css" />
+    <script type="text/javascript" src="https://unpkg.com/rmodal/dist/rmodal.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
                         
             <div >
              
@@ -38,6 +42,24 @@
     <?php } ?>
        
 	</table>
+    <script type="text/javascript" >
+            function eliminar(id){
+                swal({
+                    title: "Esta seguro?",
+                    text: "Esta empresa se eliminara!",
+                    icon: "error",
+                    buttons: true,
+                    dangerMode: true
+                  }).then((willDelete) => {
+                    if (willDelete) {
+                        swal("Muy bien!", "Se ha eliminado","success");
+                        setTimeout(function(){
+                        location.href="index.php?c=Usuario&a=delete&id="+id;
+                    }, 1000);
+                    }
+                  });
+            }
+    </script>
 
    <script type="text/javascript">
         function doSearch()
@@ -74,6 +96,8 @@
             }
         }
   </script>
+
+
 
 </div>    
  
