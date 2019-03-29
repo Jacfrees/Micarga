@@ -7,19 +7,19 @@
 
     <form method="post" class="container" autocomplete="off">
                                 <label >Nombre</label>
-                                <input maxlength="45" type="text"  name="Conductor[Nombre]" 
+                                <input maxlength="45" type="text" onkeypress="return soloLetras(event)" name="Conductor[Nombre]" 
                                 value="<?= $Conductor->Nombre ?>" required/>
                                 <br>
                                 <label >Documento</label>
-                                <input maxlength="45" type="text"  name="Conductor[Documento]"   
+                                <input maxlength="45" type="text"  name="Conductor[Documento]"onkeypress="return numeros(event)"   
                                 value="<?= $Conductor->Documento ?>" required/>
                                  <br>
                                <label >Numero Celular</label>
-                                <input maxlength="45" type="text"  name="Conductor[NumCelular]"  
+                                <input maxlength="45" type="text"  name="Conductor[NumCelular]" onkeypress="return numeros(event)" 
                                 value="<?= $Conductor->NumCelular ?>" required/>
                                 <br>
                                  <label >Licencia Conduccion</label>
-                                <input maxlength="45" type="text"  name="Conductor[LicConduccion]"   
+                                <input maxlength="45" type="text"  name="Conductor[LicConduccion]" onkeypress="return numeros(event)"  
                                 value="<?= $Conductor->LicConduccion ?>" required/>
                                   <br>
                                  <label > Vencimiento Licencia</label>

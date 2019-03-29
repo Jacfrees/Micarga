@@ -10,11 +10,11 @@
                             value="<?= $Vehiculo->PlacaCabezote ?>" required/>
                             <br>
                             <label >Modelo</label>
-                            <input maxlength="45" type="text" name="Vehiculo[Modelo]"   
+                            <input maxlength="45" type="text" name="Vehiculo[Modelo]"onkeypress="return numeros(event)"
                             value="<?= $Vehiculo->Modelo ?>" required/>
-                             <br>
-                           <label >Color</label>
-                            <input maxlength="45" type="text"  name="Vehiculo[Color]"  
+                            <br>
+                            <label >Color</label>
+                            <input maxlength="45" type="text"onkeypress="return soloLetras(event)"  name="Vehiculo[Color]"  
                             value="<?= $Vehiculo->Color ?>" required/>
                             <br>
                             <label >Placa Remolque</label>
@@ -22,7 +22,7 @@
                             value="<?= $Vehiculo->PlacaRemolque ?>" required/>
                             <br>
                             <label >Capacidad Tanque</label>
-                            <input maxlength="45" type="text"  name="Vehiculo[CapacidadTanque]"   
+                            <input maxlength="45" type="text"  name="Vehiculo[CapacidadTanque]"  
                             value="<?= $Vehiculo->CapacidadTanque ?>" required/>
                             <br>
                             

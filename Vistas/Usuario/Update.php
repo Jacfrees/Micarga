@@ -7,21 +7,26 @@
 <form method="post" autocomplete="off" class="container">
                            
                             <label >Nombre</label>
-                            <input maxlength="45" type="text"  name="Usuario[Nombre]" 
+                            <input maxlength="45" type="text"onkeypress="return soloLetras(event)"  name="Usuario[Nombre]" 
                             value="<?= $Usuario->Nombre ?>" required/>
                             <br>
                             <label >Documento</label>
-                            <input maxlength="45" type="text"  name="Usuario[Documento]"   
+                            <input maxlength="45" type="text" name="Usuario[Documento]"onkeypress="return numeros(event)"   
                             value="<?= $Usuario->Documento ?>" required/>
                              <br>
                            <label >Telefono</label>
-                            <input maxlength="45" type="text"  name="Usuario[Telefono]"  
+                            <input maxlength="45" type="text"  name="Usuario[Telefono]"onkeypress="return numeros(event)"  
                             value="<?= $Usuario->Telefono ?>" required/>
                             <br>
-                             <label >Perfil</label>
-                            <input maxlength="45" type="text"  name="Usuario[Perfil]"   
-                            value="<?= $Usuario->Perfil ?>" required/>
-                              <br>
+                            
+                            <label>Perfil:</label>
+                            <select name="Usuario[Perfil]"  required="">
+                            <option value="<?= $Usuario->Perfil ?>"><?= $Usuario->Perfil ?></option>
+                            <option value="Administrador">Administrador</option>
+                            <option value="Empleado">Empleado</option>
+                            </select>
+                            <br>
+                            
                              <label > Password</label>
                             <input maxlength="45" type="text"  name="Usuario[Password]"   
                             value="<?= $Usuario->Password ?>" required/>

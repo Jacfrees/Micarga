@@ -88,7 +88,7 @@ public function save($tip,$fere,$feve,$num,$idv){
 				$vehic = new Vehiculo();
 				$vehic->findBypk($obj->Vehiculo_idVehiculo);
 				$obj->vehi = $vehic;
-			$Documento[]=$obj;
+			    $Documento[]=$obj;
 	}
 			
 			return $Documento;

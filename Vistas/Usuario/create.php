@@ -6,16 +6,21 @@
                             <form action="" method="post" class="container" autocomplete="off">
 
                             <label >Nombre</label>
-                            <input maxlength="45" type="text"  name="Usuario[Nombre]"   value="" required/>
+                            <input maxlength="45" type="text" onkeypress="return soloLetras(event)"name="Usuario[Nombre]"   value="" required/>
                             <br>
                             <label >Documento</label>
-                            <input maxlength="45" type="text"  name="Usuario[Documento]"   value="" required/>
+                            <input maxlength="45" type="text" name="Usuario[Documento]"onkeypress="return numeros(event)"   value="" required/>
+
                             <br>
                             <label >Telefono</label>
-                            <input maxlength="45" type="text"  name="Usuario[Telefono]"   value="" required/>
+                            <input maxlength="45" type="text"  name="Usuario[Telefono]"onkeypress="return numeros(event)"   value="" required/>
                             <br>  
-                            <label >Perfil</label>
-                            <input maxlength="45" type="text"  name="Usuario[Perfil]"   value="" required/>
+                            <label>Perfil:</label>
+                            <select name="Usuario[Perfil]" value="" required="">
+                            <option value="">Seleccione un perfil</option>
+                            <option value="Administrador">Administrador</option>
+                            <option value="Empleado">Empleado</option>
+                            </select><br>
                             <br>
                             <label>Password</label>
                             <input maxlength="45" type="Password"  name="Usuario[Password]"   value="" required/>
@@ -24,24 +29,31 @@
                             
                         <button type="reset" class="boton_personalizado4">Cancelar</button>
                         <button type="submit" class="boton_personalizado3">Guardar</button>
+
                         </form>
-
-    <script>
-    function valida(e){
-    tecla = (document.all) ? e.keyCode : e.which;
-
-    //Tecla de retroceso para borrar, siempre la permite
-    if (tecla==8){
-        return true;
-    }
-        
-    // Patron de entrada, en este caso solo acepta numeros
-    patron =/[0-9]/;
-    tecla_final = String.fromCharCode(tecla);
-    return patron.test(tecla_final);
-}
-
-        function soloLetras(e){
+                     
+                            <script>
+                            function numeros(e){
+                            key = e.keyCode || e.which;
+                            tecla = String.fromCharCode(key).toLowerCase();
+                            letras = " 0123456789";
+                            especiales = [8,37,39,46];
+ 
+                            tecla_especial = false
+                            for(var i in especiales){
+                            if(key == especiales[i]){
+                            tecla_especial = true;
+                             break;
+                         } 
+                       }
+ 
+                            if(letras.indexOf(tecla)==-1 && !tecla_especial)
+                            return false;
+                            }
+             
+                            </script>
+                            <script>
+    function soloLetras(e){
        key = e.keyCode || e.which;
        tecla = String.fromCharCode(key).toLowerCase();
        letras = " áéíóúabcdefghijklmnñopqrstuvwxyz";
@@ -61,13 +73,7 @@
     }
 </script>
 
-<script>
-//valida que no se repita un mismo registro
-function valida () {
-   
-    
-}
-</script>
+      
 </div>                          
 
   <?php include_once("Vistas/footer.php"); ?>                      
