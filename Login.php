@@ -46,6 +46,13 @@
 						<input class="input100" type="password" name="Login[Contrasena]" placeholder="Contraseña">
 						<span class="focus-input100" data-placeholder="&#xe80f;"></span>
 					</div>
+					<div align="center">
+						<?php 
+							if (isset($_GET["error"])) {
+							echo "<a> Datos Incorrectos </a>";
+							}
+	 					?>
+					</div>	
 
 					<div class="container-login100-form-btn m-t-32">
 						<button class="login100-form-btn">
