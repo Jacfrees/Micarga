@@ -11,11 +11,11 @@
                             value="<?= $Documento->Tipo ?>" required/>
                             <br>
                             <label >Fecha Renovacion</label>
-                            <input maxlength="45" type="text" name="Documento[FechaRenovacion]"   
+                            <input maxlength="45" type="date" name="Documento[FechaRenovacion]"   
                             value="<?= $Documento->FechaRenovacion ?>" required/>
                             <br>
                             <label >Fecha Vencimiento</label>
-                            <input maxlength="45" type="text"  name="Documento[FechaVencimiento]"  
+                            <input maxlength="45" type="date"  name="Documento[FechaVencimiento]"  
                             value="<?= $Documento->FechaVencimiento ?>" required/>
                             <br>
                             <label >Numero</label>

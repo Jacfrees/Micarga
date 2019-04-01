@@ -3,7 +3,7 @@ require_once("Modelos/Usuario.php"); //requerimos todo el modelo usuarios para p
 	class homeController{
 
 		public static function main($action){
-			if (!isset($_SESSION["Documento"]) && $_GET["a"] != "Login" && $_GET["a"] != "home")
+			if (!isset($_SESSION["Usuario"]) && $_GET["a"] != "Login" && $_GET["a"] != "home" && $_GET["a"] != "homeE")
 			 header("location: index.php?c=home&a=Login"); 
 	        $_this = new homeController();
 	        
