@@ -4,22 +4,22 @@
 
 <h2 align="center" >Actualizar Documentos</h2>
 
-<form method="post" class="container" autocomplete="off>
+<form method="post" autocomplete="off" class="container">
                           
                             <label >Tipo</label>
-                            <input maxlength="45" type="text"  name="Documento[Tipo]" 
+                            <input maxlength="45" type="text"onkeypress="return soloLetras(event)"  name="Documento[Tipo]" 
                             value="<?= $Documento->Tipo ?>" required/>
                             <br>
                             <label >Fecha Renovacion</label>
                             <input maxlength="45" type="text" name="Documento[FechaRenovacion]"   
                             value="<?= $Documento->FechaRenovacion ?>" required/>
-                             <br>
+                            <br>
                             <label >Fecha Vencimiento</label>
                             <input maxlength="45" type="text"  name="Documento[FechaVencimiento]"  
                             value="<?= $Documento->FechaVencimiento ?>" required/>
                             <br>
                             <label >Numero</label>
-                            <input maxlength="45" type="text"  name="Documento[Numero]"   
+                            <input maxlength="45" type="text"  name="Documento[Numero]"onkeypress="return numeros(event)"   
                             value="<?= $Documento->Numero ?>" required/>
                             <br>
                             

@@ -9,16 +9,17 @@
                             <input maxlength="45" type="text"  name="Vehiculo[PlacaCabezote]"   value="" required/>
                             <br>
                             <label >Modelo</label>
-                            <input maxlength="45" type="text"  name="Vehiculo[Modelo]"   value="" required/>
+                            <input maxlength="45" type="text"  name="Vehiculo[Modelo]"onkeypress="return numeros(event)"value="" required/>
                             <br>
+                            
                             <label >Color</label>
-                            <input maxlength="45" type="text"  name="Vehiculo[Color]"   value="" required/>
+                            <input maxlength="45" type="text" onkeypress="return soloLetras(event)" name="Vehiculo[Color]"   value="" required/>
                             <br>  
                             <label >Placa Remolque</label>
                             <input maxlength="45" type="text"  name="Vehiculo[PlacaRemolque]"   value="" required/>
                             <br>
                             <label>Capacidad Tanque</label>
-                            <input maxlength="45" type="text"  name="Vehiculo[CapacidadTanque]"   value="" required/>
+                            <input maxlength="45" type="text"  name="Vehiculo[CapacidadTanque]"onkeypress="return numeros(event)"value="" required/>
                             <br>
                             
                             <label>Seccional:</label>
@@ -46,5 +47,48 @@
                             <button type="reset" class="boton_personalizado4">Cancelar</button>
                             <button type="submit" class="boton_personalizado3">Guardar</button>
                             </form>
+                            <script>
+                            function numeros(e){
+                            key = e.keyCode || e.which;
+                            tecla = String.fromCharCode(key).toLowerCase();
+                            letras = " 0123456789";
+                            especiales = [8,37,39,46];
+ 
+                            tecla_especial = false
+                            for(var i in especiales){
+                            if(key == especiales[i]){
+                            tecla_especial = true;
+                             break;
+                         } 
+                       }
+ 
+                            if(letras.indexOf(tecla)==-1 && !tecla_especial)
+                            return false;
+                            }
+             
+                            </script>
+                            <script>
+    function soloLetras(e){
+       key = e.keyCode || e.which;
+       tecla = String.fromCharCode(key).toLowerCase();
+       letras = " áéíóúabcdefghijklmnñopqrstuvwxyz";
+       especiales = "8-37-39-46";
+
+       tecla_especial = false
+       for(var i in especiales){
+            if(key == especiales[i]){
+                tecla_especial = true;
+                break;
+            }
+        }
+
+        if(letras.indexOf(tecla)==-1 && !tecla_especial){
+            return false;
+        }
+    }
+</script>
+                            
+
+                            
 </div>
 <?php include_once("Vistas/footer.php"); ?>

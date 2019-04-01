@@ -3,15 +3,18 @@ require_once("Modelos/Usuario.php"); //requerimos todo el modelo usuarios para p
 	class homeController{
 
 		public static function main($action){
-
+			//if (!isset($_SESSION["Documento"]) && $_GET["a"] != "Login" && $_GET["a"] != "home")
+			 //header("location: index.php?c=home&a=Login"); 
 	        $_this = new homeController();
 	        
 			switch ($action) { //dependiendo la accion que se le de nos envia a cualquiera de ellos.   
 				case "home":
 					$_this->home();
 					break;
-				case "login":
-				    $_this->login();
+				case "homeE":
+					$_this->homeE();
+				case "Login":
+				    $_this->Login();
 				    break;	
 				case "logout":
 					$_this->logout();
@@ -24,32 +27,39 @@ require_once("Modelos/Usuario.php"); //requerimos todo el modelo usuarios para p
 		private function home(){
 			require "Vistas/home.php";//aqui requerimos todo la vista de home!
 		}
-		
-		private function Login(){
-			session_start();
-			if (isset($_POST["Login"])) { // si el documento y la contraseña son verdaderos entonces nos dejara ingresar al home!
-				$documento = $_POST["Login"]["Documento"];
-				$Contrasena = $_POST["Login"]["Contrasena"];
-
-				$Usuario = new Usuario();
-				$Usuario->findByDocument($documento);
-				if (password_verify( $Contrasena,$Usuario->Password)) {
-					$_SESSION["Usuario"]= $Usuario;
-					$_SESSION["Perfil"]= $Usuario->Perfil;
-					if ($_SESSION["Perfil"]!="Administrador"  ) {
-						header("location:index.php?c=home&a=home");
-	
-				}else{
-					$_SESSION["Perfil"] != "Empleado";
-					header("location: index.php?c=home&a=home");
-				}
-			}else{
-				header("location:index.php?$c=home&a=login&error=true");//y si es incorrecta la contraseña  entonces nos dara error y nos volvera al login!
-			}
-		}else{
-			require "Login.php";
+		private function homeE(){
+			require "Vistas/homeE.php";
 		}
-	}	
+
+		private function Login(){
+            if (isset($_POST["Login"]) && $_POST["Login"]["Documento"] != "" && $_POST["Login"]["Contrasena"] !=""){
+                // Iniciar Sesion
+                $Documento = $_POST["Login"]["Documento"];
+                $Password = $_POST["Login"]["Contrasena"];
+                $usuario = new Usuario();
+                $usuario->findByDocument($Documento);
+
+                if (password_verify($Password,$usuario->Password)){
+                    $_SESSION["Usuario"] = $usuario;
+                    $_SESSION["Perfil"] = $usuario;
+                    	if ($_SESSION["Perfil"] != "Administrador"){
+ 
+                    header("location: index.php?c=home&a=home");
+                    
+                }else{
+                    $_SESSION["Perfil"] != "Empleado";
+                 header("location:index.php?c=home&a=homeE");
+             		}
+                }else{
+                    header("Location: index.php?c=home&a=Login&error=true");
+                	}
+                }else{
+                
+                require "Login.php";
+            }
+        }
+
+	
 		private function logout(){
 			session_destroy();
 			header("location: index.php?c=home&a=login");

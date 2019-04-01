@@ -6,7 +6,7 @@
 
     <form method="post" class="container" autocomplete="off">
                                 <label >Nombre</label>
-                                <input maxlength="45" type="text"  name="Curso[Nombre]" 
+                                <input maxlength="45" type="text"onkeypress="return soloLetras(event)"  name="Curso[Nombre]" 
                                 value="<?= $Curso->Nombre ?>" required/>
                                 <br>
                                 <label >Fecha Inicio</label>
