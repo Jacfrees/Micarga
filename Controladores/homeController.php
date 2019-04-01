@@ -3,8 +3,8 @@ require_once("Modelos/Usuario.php"); //requerimos todo el modelo usuarios para p
 	class homeController{
 
 		public static function main($action){
-			//if (!isset($_SESSION["Documento"]) && $_GET["a"] != "Login" && $_GET["a"] != "home")
-			 //header("location: index.php?c=home&a=Login"); 
+			if (!isset($_SESSION["Documento"]) && $_GET["a"] != "Login" && $_GET["a"] != "home")
+			 header("location: index.php?c=home&a=Login"); 
 	        $_this = new homeController();
 	        
 			switch ($action) { //dependiendo la accion que se le de nos envia a cualquiera de ellos.   
@@ -13,6 +13,7 @@ require_once("Modelos/Usuario.php"); //requerimos todo el modelo usuarios para p
 					break;
 				case "homeE":
 					$_this->homeE();
+					break;
 				case "Login":
 				    $_this->Login();
 				    break;	
@@ -62,7 +63,7 @@ require_once("Modelos/Usuario.php"); //requerimos todo el modelo usuarios para p
 	
 		private function logout(){
 			session_destroy();
-			header("location: index.php?c=home&a=login");
+			header("location: index.php?c=home&a=Login");
 		}
 	
 }

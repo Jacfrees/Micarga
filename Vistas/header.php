@@ -50,8 +50,6 @@
 
 							</ul>
 							</li>
-							
-							
 							<li><a href="index.php?c=home&a=logout" class="button primary">CERRAR SESION</a></li>
 						</ul>
 						
