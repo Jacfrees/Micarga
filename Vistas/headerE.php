@@ -35,7 +35,7 @@
 							<li>
 								<a href="#" class="hh">LISTADOS</a>
 								<ul>
-									
+									<li><a href="index.php?c=Usuario&a=admin" class="hh">USUARIOS</a></li>
 									<li><a href="index.php?c=Conductor&a=admin" class="hh">CONDUCTOR</a></li>
 									<li><a href="index.php?c=Vehiculo&a=admin" class="hh">VEHICULO</a></li>
 									
