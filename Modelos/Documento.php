@@ -35,6 +35,7 @@ public function save($tip,$fere,$feve,$num,$idv){
 			return true;
 
 	}catch(Exception $e){
+		echo $e;
 		return false;
 	}
 
@@ -43,6 +44,7 @@ public function save($tip,$fere,$feve,$num,$idv){
 
     public function update (){
 	$Conexion = $this->getConexion();
+	
 	$stm = $Conexion->prepare("UPDATE Documento SET Tipo=:Tipo, FechaRenovacion=:FechaRenovacion, FechaVencimiento=:FechaVencimiento, Numero=:Numero, Vehiculo_idVehiculo=:Vehiculo_idVehiculo WHERE idDocumento=:id");
 
 	$stm->bindparam(":Tipo",$this->Tipo);

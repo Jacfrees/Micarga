@@ -42,6 +42,7 @@ class ConductorController{
 			if ($guardo){
 			 	header("location:index.php?c=Conductor&a=admin");
 			}else{
+				header("location:index.php?c=Conductor&a=admin&error=true");
 				echo"ocurrio un error al guardar";
 			}
 				

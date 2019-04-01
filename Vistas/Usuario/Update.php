@@ -27,11 +27,7 @@
                             </select>
                             <br>
                             
-                             <label > Password</label>
-                            <input maxlength="45" type="text"  name="Usuario[Password]"   
-                            value="<?= $Usuario->Password ?>" required/>
-                              <br>
-                           
+                             
                         <button type="submit" class="boton_personalizado4">Guardar</button>
                         </form>
                            <script>

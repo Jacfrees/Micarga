@@ -91,7 +91,6 @@ public function save($pc,$m,$c,$pr,$ct,$sec,$idc){
 
 			
 			while ($obj = $stm->fetch()) {
-
 				$cond = new Conductor();
 				$cond->findBypk($obj->Conductor_idConductor );
 				$obj->Conduc = $cond;  

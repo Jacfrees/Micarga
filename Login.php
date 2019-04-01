@@ -35,7 +35,7 @@
 				<span class="login100-form-title p-b-41">
 					 Ingresar
 				</span>
-				<form class="login100-form validate-form p-b-33 p-t-5" method="post" autocomplete="off">
+				<form class="login100-form validate-form p-b-33 p-t-5" method="POST" autocomplete="off">
 
 					<div class="wrap-input100 validate-input" data-validate = "Ingrese su usuario!">
 						<input class="input100" type="text" name="Login[Documento]" placeholder="Usuario">

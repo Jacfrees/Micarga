@@ -2,12 +2,15 @@
 
 <div class="class1">
 <form role="form" >
-                        <h2><b><center> Listado De Conductores</b></center></h2>
+ <h2><b><center> Listado De Conductores</b></center></h2>
+<link rel="stylesheet" href="https://unpkg.com/rmodal/dist/rmodal.css" type="text/css" />
+<script type="text/javascript" src="https://unpkg.com/rmodal/dist/rmodal.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     
              
                 <input class="container" autocomplete="off"  id="searchTerm" type="text" onkeyup="doSearch()" name="query" placeholder="Buscar">
               
-  </form>
+ </form>
    
                         <table align="center" id="datos" border="1" class="container">
                         <tr>
@@ -30,7 +33,8 @@
 
                 <a href="index.php?c=Conductor&a=update&id=<?= $ss->idConductor; ?>" class="boton_personalizado2"> Editar</a>
                 
-                <a href="index.php?c=Conductor&a=delete&id=<?=$ss->idConductor; ?>" class="boton_personalizado1"> Eliminar</a>
+                <a href= "index.php?c=Conductor&a=delete&id=<?=$ss->idConductor; ?>" class="boton_personalizado1"> Eliminar</a>
+              
           
             </td>
     </tr>
@@ -72,6 +76,25 @@
                 }
             }
         }
+  </script>
+   <script type="text/javascript" >
+            function eliminar(id){
+                swal({
+                    title: "Esta seguro?",
+                    text: "Este conductor se eliminara!",
+                    icon: "error",
+                    buttons: true,
+                    dangerMode: true
+                  }).then((willDelete) => {
+                    if (willDelete) {
+                        swal("Muy bien!", "Se ha eliminado","success");
+                        setTimeout(function(){
+                        location.href="index.php?c=Conductor&a=delete&id="+id;
+                    }, 1000);
+                    }
+                  });
+            }
+             
   </script>
      
 </div>

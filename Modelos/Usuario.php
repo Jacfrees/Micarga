@@ -74,6 +74,7 @@ public function findByDocument($doc){
 		$stm->fetch();
 }
 
+
 public function delete($id){
 			$Conexion =$this->getConexion();
 			$stm = $Conexion->prepare("DELETE  FROM Usuario WHERE idUsuario = :id");
