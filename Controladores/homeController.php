@@ -3,8 +3,8 @@ require_once("Modelos/Usuario.php"); //requerimos todo el modelo usuarios para p
 	class homeController{
 
 		public static function main($action){
-			if (!isset($_SESSION["Documento"]) && $_GET["a"] != "Login" && $_GET["a"] != "home")
-			 header("location: index.php?c=home&a=Login"); 
+			//if (!isset($_SESSION["Documento"]) && $_GET["a"] != "Login" && $_GET["a"] != "home")
+			 //header("location: index.php?c=home&a=Login"); 
 	        $_this = new homeController();
 	        
 			switch ($action) { //dependiendo la accion que se le de nos envia a cualquiera de ellos.   
@@ -32,33 +32,36 @@ require_once("Modelos/Usuario.php"); //requerimos todo el modelo usuarios para p
 			require "Vistas/homeE.php";
 		}
 
-		private function Login(){
-            if (isset($_POST["Login"]) && $_POST["Login"]["Documento"] != "" && $_POST["Login"]["Contrasena"] !=""){
+		
+
+        private function Login(){
+			if (isset($_POST["Login"]) && $_POST["Login"]["Documento"] != "" && $_POST["Login"]["Contrasena"] != "") {
                 // Iniciar Sesion
                 $Documento = $_POST["Login"]["Documento"];
                 $Password = $_POST["Login"]["Contrasena"];
+
                 $usuario = new Usuario();
                 $usuario->findByDocument($Documento);
-
-                if (password_verify($Password,$usuario->Password)){
+                if (password_verify($Password,$usuario->Password) && $usuario->Perfil == "Administrador") {
                     $_SESSION["Usuario"] = $usuario;
-                    $_SESSION["Perfil"] = $usuario;
-                    	if ($_SESSION["Perfil"] != "Administrador"){
- 
+                    $_SESSION["Perfil"] = "Administrador";
+
+                    echo "soy Administrador";
                     header("location: index.php?c=home&a=home");
-                    
-                }else{
-                    $_SESSION["Perfil"] != "Empleado";
-                 header("location:index.php?c=home&a=homeE");
-             		}
+                }else if(password_verify($Password,$usuario->Password) && $usuario->Perfil == "Empleado"){
+                    $_SESSION["Usuario"] = $usuario;
+                    $_SESSION["Perfil"] = "Empleado";
+
+                    echo "soy Empleado";
+                    header("location: index.php?c=home&a=homeE");
+
                 }else{
                     header("Location: index.php?c=home&a=Login&error=true");
-                	}
-                }else{
-                
+                }
+            }else{
                 require "Login.php";
             }
-        }
+		}
 
 	
 		private function logout(){
