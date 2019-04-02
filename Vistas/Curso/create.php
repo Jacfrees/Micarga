@@ -3,17 +3,29 @@
     <div class="class1">
                              <h2><b><center> Registrar Cursos</b></center></h2>
 
-                            <form action="" method="post" class="container">
-                            
-                            <label >Nombre</label>
-                            <input maxlength="45" type="text"onkeypress="return soloLetras(event)"  name="Curso[Nombre]"   value="" required="" autocomplete="off">
-                            <br>
+                           <form method="post" autocomplete="off" class="container" action="upload1.php" enctype="multipart/form-data">
+                            <label>Nombre Curso:</label>
+                            <select name="Curso[Nombre]" value="" required="">
+                            <option value="">Seleccione nombre de curso</option>
+                            <option value="Manejo Defensivo">Manejo Defensivo</option>
+                            <option value="Manejo De Extintores">Manejo De Extintores</option>
+                            <option value="Sustancias Peligrosas">Sustancias Peligrosas</option>
+                            <option value="Primeros Auxilios">Primeros Auxilios</option>
+                            <option value="Trabajo En Alturas">Trabajo En Alturas</option>
+                            <option value="Mecanica Basica">Mecanica Basica</option>
+                            <option value="Examen De Aptitud">Examen De Aptitud</option>
+                            </select><br>
+
                             <label >Fecha Inicio</label>
                             <input maxlength="45" type="date"  name="Curso[FechaInicio]"   value="" required/ autocomplete="off">
                             <br>
                             <label >Fecha Vencimiento</label>
                             <div><input maxlength="45" type="date"  name="Curso[FechaVencimiento]"   value="" required/ autocomplete="off"></div>
                             <br> 
+                            
+                            <label>Subir Curso:</label>
+                            <input type="file" name="userfile"> 
+                            <br><br>
 
                             <label>Conductor</label>
                             <select name="Curso[Conductor_idConductor]"required="" >

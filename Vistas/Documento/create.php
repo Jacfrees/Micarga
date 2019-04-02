@@ -2,21 +2,37 @@
 
  <div class="class1">
 
-<form method="post" autocomplete="off" class="container">
+<form method="post" autocomplete="off" class="container" action="upload2.php" enctype="multipart/form-data">
 
                             <h2><b><center> Registrar Documento</b></center></h2>
                             <label >Tipo</label>
-                            <input maxlength="45" type="text" onkeypress="return soloLetras(event)" name="Documento[Tipo]"   value="" required/>
-                            <br>
+                            <select name="Documento[Tipo]" value="" required="">
+                            <option value="">Seleccione Tipo Documento</option>
+                            <option value="Soat">Soat</option>
+                            <option value="Tecnomecanica">Tecnomecanica</option>
+                            <option value="Poliza Hidrocarburos">Poliza Hidrocarburos</option>
+                            <option value="Poliza Extracontractua">Poliza Extracontractua</option>
+                            <option value="Prueba Hidrostatica">Prueba Hidrostatica</option>
+                            <option value="Quing Pim">Quing Pim</option>
+                            <option value="Quimmta Rueda">Quimmta Rueda</option>
+                            <option value="Tabla De Aforo">Tabla De Aforo</option>
+                            <option value="Licencia Conduccion">Licencia Conduccion</option>
+                            </select><br>
+
+                            <label >Numero</label>
+                            <input maxlength="45" type="text"  name="Documento[Numero]"onkeypress="return numeros(event)"   value="" required/>
+                            <br>  
                             <label >Fecha Renovacion</label>
                             <input maxlength="45" type="date"  name="Documento[FechaRenovacion]"   value="" required/>
                             <br>
                             <label >Fecha Vencimiento</label>
                             <input maxlength="45" type="date"  name="Documento[FechaVencimiento]"   value="" required/>
                             <br>  
-                            <label >Numero</label>
-                            <input maxlength="45" type="text"  name="Documento[Numero]"onkeypress="return numeros(event)"   value="" required/>
-                            <br>                            
+
+                            <label>Subir Documento:</label>
+                            <input type="file" name="userfile"> 
+                            <br><br>
+                           
                             <label>Vehiculo</label>
                             <select name="Documento[Vehiculo_idVehiculo]"required="" >
                             <option>Vehiculo</option>

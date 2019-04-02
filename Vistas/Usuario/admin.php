@@ -6,7 +6,7 @@
 <link rel="stylesheet" href="https://unpkg.com/rmodal/dist/rmodal.css" type="text/css" />
 <script type="text/javascript" src="https://unpkg.com/rmodal/dist/rmodal.js"></script>
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-                        
+                       
             <div >
              
                 <input class="container" autocomplete="off"  id="searchTerm" type="text" onkeyup="doSearch()" name="query" placeholder="Buscar" onkeypress="return runScript(event)">
@@ -34,30 +34,15 @@
     <td >
                 <a href="index.php?c=Usuario&a=update&id=<?= $us->idUsuario; ?>" class="boton_personalizado2"> Editar</a>
                 <a href="index.php?c=Usuario&a=delete&id=<?=$us->idUsuario; ?>" class="boton_personalizado1"> Eliminar</a>
+                
+                
     </td>
     </tr>
 
     <?php } ?>
        
 	</table>
-    <script type="text/javascript" >
-            function eliminar(id){
-                swal({
-                    title: "Esta seguro?",
-                    text: "Este usuario se eliminara!",
-                    icon: "error",
-                    buttons: true,
-                    dangerMode: true
-                  }).then((willDelete) => {
-                    if (willDelete) {
-                        swal("Muy bien!", "Se ha eliminado","success");
-                        setTimeout(function(){
-                        location.href="index.php?c=Usuario&a=delete&id="+id;
-                    }, 1000);
-                    }
-                  });
-            }
-    </script>
+ 
 
    <script type="text/javascript">
         function doSearch()
@@ -102,9 +87,7 @@
     }
 }
   </script>
-
-
-
+ 
 </div>    
  
 <?php include_once("Vistas/footer.php"); ?>
