@@ -6,20 +6,20 @@
 
                             <h2><b><center> Registrar Vehiculo</b></center></h2>
                             <label >Placa Cabezote</label>
-                            <input maxlength="45" type="text"  name="Vehiculo[PlacaCabezote]"   value="" required/>
+                            <input maxlength="45" type="text"  name="Vehiculo[PlacaCabezote]" onblur="limpia()" placeholder="acepta numeros y letras"value="" required/>
                             <br>
                             <label >Modelo</label>
-                            <input maxlength="45" type="text"  name="Vehiculo[Modelo]"onkeypress="return numeros(event)"value="" required/>
+                            <input maxlength="45" type="text"  name="Vehiculo[Modelo]"onkeypress="return numeros(event)" onblur="limpia()" placeholder="Solo acepta numeros"value="" required/>
                             <br>
                             
                             <label >Color</label>
-                            <input maxlength="45" type="text" onkeypress="return soloLetras(event)" name="Vehiculo[Color]"   value="" required/>
+                            <input maxlength="45" type="text" onkeypress="return soloLetras(event)" name="Vehiculo[Color]" placeholder="Solo acepta letras"value="" required/>
                             <br>  
                             <label >Placa Remolque</label>
-                            <input maxlength="45" type="text"  name="Vehiculo[PlacaRemolque]"   value="" required/>
+                            <input maxlength="45" type="text"  name="Vehiculo[PlacaRemolque]" placeholder="acepta numeros y letras"value="" required/>
                             <br>
                             <label>Capacidad Tanque</label>
-                            <input maxlength="45" type="text"  name="Vehiculo[CapacidadTanque]"onkeypress="return numeros(event)"value="" required/>
+                            <input maxlength="45" type="text"  name="Vehiculo[CapacidadTanque]"onkeypress="return numeros(event)" placeholder="Solo acepta numeros"value="" required/>
                             <br>
                             
                             <label>Seccional:</label>
@@ -37,6 +37,7 @@
                             <label>Conductor</label>
                             <select name="Vehiculo[Conductor_idConductor]"required="" >
                                 <option>Conductor</option>
+
                                 <?php foreach ($conductor as $conduc ) {?>
                                     <option value="<?= $conduc->idConductor ?>"><?= $conduc->Documento ?></option>
                                    
@@ -86,6 +87,17 @@
             return false;
         }
     }
+</script>
+
+<script>
+function limpia() {
+    var val = document.getElementById("miInput").value;
+    var tam = val.length;
+    for(i = 0; i < tam; i++) {
+        if(!isNaN(val[i]))
+            document.getElementById("miInput").value = '';
+    }
+}
 </script>
                             
 

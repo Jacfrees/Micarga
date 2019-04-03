@@ -20,7 +20,7 @@
                             </select><br>
 
                             <label >Numero</label>
-                            <input maxlength="45" type="text"  name="Documento[Numero]"onkeypress="return numeros(event)"   value="" required/>
+                            <input maxlength="45" type="text"  name="Documento[Numero]"onkeypress="return numeros(event)" placeholder="Solo acepta numeros"value="" required/>
                             <br>  
                             <label >Fecha Renovacion</label>
                             <input maxlength="45" type="date"  name="Documento[FechaRenovacion]"   value="" required/>
