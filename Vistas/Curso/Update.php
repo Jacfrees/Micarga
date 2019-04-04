@@ -5,10 +5,19 @@
     <h2 align="center" >Actualizar Curso</h2>
 
     <form method="post" class="container" autocomplete="off">
-                                <label >Nombre</label>
-                                <input maxlength="45" type="text"onkeypress="return soloLetras(event)"  name="Curso[Nombre]" 
-                                value="<?= $Curso->Nombre ?>" required/>
-                                <br>
+
+                               <label>Nombre Curso:</label>
+                               <select name="Curso[Nombre]"  required="">
+                               <option value="<?= $Curso->Nombre ?>"><?= $Curso->Nombre ?></option>
+                               <option value="Manejo Defensivo">Manejo Defensivo</option>
+                               <option value="Manejo De Extintores">Manejo De Extintores</option>
+                               <option value="Sustancias Peligrosas">Sustancias Peligrosas</option>
+                               <option value="Primeros Auxilios">Primeros Auxilios</option>
+                               <option value="Trabajo En Alturas">Trabajo En Alturas</option>
+                               <option value="Mecanica Basica">Mecanica Basica</option>
+                               <option value="Examen De Aptitud">Examen De Aptitud</option>
+                               </select>
+                               <br>
                                 <label >Fecha Inicio</label>
                                 <input maxlength="45" type="date"  name="Curso[FechaInicio]"   
                                 value="<?= $Curso->FechaInicio ?>" required/>

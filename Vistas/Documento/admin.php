@@ -6,7 +6,7 @@
     
             <div >
              
-                <input class="container" autocomplete="off"  id="searchTerm" type="text" onkeyup="doSearch()" name="query" placeholder="Buscar">
+                <input class="container" autocomplete="off"  id="searchTerm" type="text" onkeyup="doSearch()" name="query" placeholder="Buscar"onkeypress="return runScript(event)">
               
             </div>
   </form>
@@ -77,6 +77,14 @@
                 }
             }
         }
+    function runScript(e) {
+    //See notes about 'which' and 'key'
+    if (e.keyCode == 13) {
+        var tb = document.getElementById("searchTerm");
+        eval(tb.value);
+        return false;
+    }
+}
   </script>
 </div>    
 <?php include_once("Vistas/footer.php"); ?>
