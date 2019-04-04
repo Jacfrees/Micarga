@@ -25,6 +25,17 @@
     <td><?= $ss->Nombre;?></td>
     <td><?= $ss->FechaInicio;?></td>
     <td><?= $ss->FechaVencimiento;?></td>
+     <?php
+            $hoy = date("Y-m-d");
+            $proxVencer = date("Y-m-d",strtotime($ss->FechaVencimiento."- 8 days"));
+
+
+            if($hoy>=date("Y-m-d",strtotime($ss->FechaVencimiento))){
+                echo "<span title='Documento Vencido'><img src='images/icons/error.png' /></span>";
+            }else if($hoy>=$proxVencer){
+                echo "<span title='Próximo a Vencer'><img src='images/icons/alert.png' /></span>";
+            }
+        ?>
     <td><?= $ss->Conduc->Documento;?></td>
    
     <td >
