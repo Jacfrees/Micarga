@@ -2,7 +2,7 @@
 
  <div class="class1">
 
-<form method="post" autocomplete="off" class="container" action="upload.php" enctype="multipart/form-data">
+<form method="post" autocomplete="off" class="container" action="" enctype="multipart/form-data">
 
                             <h2><b><center> Registrar Vehiculo</b></center></h2>
                             <label >Placa Cabezote</label>

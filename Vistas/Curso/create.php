@@ -3,7 +3,7 @@
     <div class="class1">
                              <h2><b><center> Registrar Cursos</b></center></h2>
 
-                           <form method="post" autocomplete="off" class="container" action="upload1.php" enctype="multipart/form-data">
+                           <form method="post" autocomplete="off" class="container" action="" enctype="multipart/form-data">
                             <label>Nombre Curso:</label>
                             <select name="Curso[Nombre]" value="" required="">
                             <option value="">Seleccione nombre de curso</option>
