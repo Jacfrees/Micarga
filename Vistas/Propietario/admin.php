@@ -1,52 +1,45 @@
 <?php include_once("Vistas/header.php"); ?>
 
- <div class="class1">
+<div class="class1">
 <form role="form" >
-    <h2><b><center> Listado De Vehiculos</b></center></h2>
+                        <h2><b><center> Listado De Propietarios</b></center></h2>
+    
             <div >
-             <input class="container" autocomplete="off"  id="searchTerm" type="text" onkeyup="doSearch()" name="query" placeholder="Buscar"onkeypress="return runScript(event)">
-                <br>
+             
+                <input class="container" autocomplete="off"  id="searchTerm" type="text" onkeyup="doSearch()" name="query" placeholder="Buscar"onkeypress="return runScript(event)">
               
             </div>
   </form>
-                      
-                        
- 
+   
                         <table align="center" id="datos" border="1" class="container">
                         <tr>
-                        <th>Placa Cabezote</th>
-                        <th>Modelo</th>
-                        <th>Color</th>
-                        <th>Placa Remolque</th>
-                        <th>Capacidad Tanque</th>
-                        <th>Seccional</th>
-                        <th>Conductor</th>
-                        <th>Acciones</th>
-                
+                        <th>Nombre</th>
+                        <th>Direccion</th>
+                        <th>Documento</th>
+                        <th>Celular</th>
+                        <th >Vehiculo</th>
+                        <th >Acciones</th>
                         </tr>
-                        <?php foreach ($vehiculo as $veh) {?>
+            <?php foreach($Propietario as $pro) {?>
 
-
-
-            <tr> 
-            <td><?= $veh->PlacaCabezote;?></td>
-            <td><?= $veh->Modelo;?></td>
-            <td><?= $veh->Color;?></td>
-            <td><?= $veh->PlacaRemolque;?></td>
-            <td><?= $veh->CapacidadTanque;?></td>
-            <td><?= $veh->Seccional;?></td>
-            <td><?= $veh->Conduc->Documento;?></td>
-            
-            <td >
-                <a href="index.php?c=Vehiculo&a=update&id=<?= $veh->idVehiculo; ?>" class="boton_personalizado2">Editar</a>
-                <a href="index.php?c=Vehiculo&a=delete&id=<?=$veh->idVehiculo; ?>" class="boton_personalizado1">Eliminar</a>
+    <tr> 
+    <td><?= $pro->Nombre;?></td>
+    <td><?= $pro->Direccion;?></td>
+    <td><?= $pro->Documento;?></td>
+    <td><?= $pro->Celular;?></td>
+    <td><?= $pro->vehic->Propietario;?></td>
+   
+    <td >
+                <a href="index.php?c=Propietario&a=update&id=<?= $pro->idPropietario; ?>" class="boton_personalizado2"> Editar</a>
+                <a href="index.php?c=Propietario&a=delete&id=<?=$pro->idPropietario; ?>" class="boton_personalizado1"> Eliminar</a>
+          
             </td>
-            </tr>
+    </tr>
 
     <?php } ?>
        
 	</table>
-     <script type="text/javascript">
+    <script type="text/javascript">
         function doSearch()
         {
             var tableReg = document.getElementById('datos');
@@ -80,7 +73,7 @@
                 }
             }
         }
-  function runScript(e) {
+     function runScript(e) {
     //See notes about 'which' and 'key'
     if (e.keyCode == 13) {
         var tb = document.getElementById("searchTerm");
@@ -89,6 +82,6 @@
     }
 }
   </script>
-
-</div>   
+    </div>
+ 
 <?php include_once("Vistas/footer.php"); ?>

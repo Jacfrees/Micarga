@@ -37,6 +37,11 @@ switch ($controller) {
 		DocumentoController::main($action);
 	    break;
 
+	case "Propietario":
+		require "Controladores/PropietarioController.php";
+		PropietarioController::main($action);
+	    break;
+
 	default://controlador de inicio
 			require "Controladores/homeController.php";
 			//accion estatica ::

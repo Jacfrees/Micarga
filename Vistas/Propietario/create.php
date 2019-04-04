@@ -4,42 +4,27 @@
 
 <form method="post" autocomplete="off" class="container" action="" enctype="multipart/form-data">
 
-                            <h2><b><center> Registrar Vehiculo</b></center></h2>
-                            <label >Placa Cabezote</label>
-                            <input maxlength="45" type="text"  name="Vehiculo[PlacaCabezote]" onblur="limpia()" placeholder="acepta numeros y letras"value="" required/>
+                            <h2><b><center> Registrar Propietario</b></center></h2>
+                            <label >Nombre</label>
+                            <input maxlength="45" type="text" name="Propietario[Nombre]"onkeypress="return letras(event)" placeholder="acepta solo letras"value="" required/>
                             <br>
-                            <label >Modelo</label>
-                            <input maxlength="45" type="text"  name="Vehiculo[Modelo]"onkeypress="return numeros(event)" onblur="limpia()" placeholder="Solo acepta numeros"value="" required/>
+                            <label >Direccion</label>
+                            <input maxlength="45" type="text"  name="Propietario[Direccion]" placeholder="acepta numeros y letras"value="" required/>
                             <br>
                             
-                            <label >Color</label>
-                            <input maxlength="45" type="text" onkeypress="return soloLetras(event)" name="Vehiculo[Color]" placeholder="Solo acepta letras"value="" required/>
+                            <label >Documento</label>
+                            <input maxlength="45" type="text" onkeypress="return numeros(event)" name="Propietario[Documento]" placeholder="Solo acepta numeros"value="" required/>
                             <br>  
-                            <label >Placa Remolque</label>
-                            <input maxlength="45" type="text"  name="Vehiculo[PlacaRemolque]" placeholder="acepta numeros y letras"value="" required/>
+                            <label >Celular</label>
+                            <input maxlength="45" type="text"  name="Propietario[Celular]"onkeypress="return numeros(event)" placeholder="Solo acepta numeros"value="" required/>
                             <br>
-                            <label>Capacidad Tanque</label>
-                            <input maxlength="45" type="text"  name="Vehiculo[CapacidadTanque]"onkeypress="return numeros(event)" placeholder="Solo acepta numeros"value="" required/>
-                            <br>
-                            
-                            <label>Seccional:</label>
-                            <select name="Vehiculo[Seccional]" value="" required="">
-                            <option value="">Seleccione una seccional</option>
-                            <option value="Sogamoso">Sogamoso</option>
-                            <option value="Corrales">Corrales</option>
-                            <option value="Yopal">Yopal</option>
-                            </select><br>
+                           
+                            <label>Vehiculo</label>
+                            <select name="Propietario[id_vehiculo]"required="" >
+                                <option>Vehiculo</option>
 
-                            <label>Subir carta propiedad:</label>
-                            <input type="file" name="userfile"> 
-                            <br><br>
-                                                        
-                            <label>Conductor</label>
-                            <select name="Vehiculo[Conductor_idConductor]"required="" >
-                                <option>Conductor</option>
-
-                                <?php foreach ($conductor as $conduc ) {?>
-                                    <option value="<?= $conduc->idConductor ?>"><?= $conduc->Documento ?></option>
+                                <?php foreach ($Vehiculo as $vehic ) {?>
+                                    <option value="<?= $vehic->id_vehiculo ?>"><?= $vehic->Vehiculo ?></option>
                                    
                              <?php   } ?>
                             </select>

@@ -2,7 +2,7 @@
 
  <div class="class1">
 
-<form method="post" autocomplete="off" class="container" action="upload2.php" enctype="multipart/form-data">
+<form method="post" autocomplete="off" class="container" action="" enctype="multipart/form-data">
 
                             <h2><b><center> Registrar Documento</b></center></h2>
                             <label >Tipo</label>
