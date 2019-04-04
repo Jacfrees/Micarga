@@ -1,16 +1,42 @@
 <?php include_once("headerE.php"); ?>
 			<!-- Banner -->
-				<section id="banner">
-					<div class="content">
-						
-						
-						
-						
-					</div>
-					<a href="#one" class="goto-next scrolly">Next</a>
-				</section>
+				
+			<div class="project-carousel">
+				    <div class="project-strip">
+				      <div class="project"><img src="images/car.jpg" alt=""/></div>
+				      <div class="project"><img src="images/car1.jpg" alt=""/></div>
+				      <div class="project"><img src="images/car2.jpg" alt=""/></div>
+				      <div class="project"><img src="images/car3.jpg" alt=""/></div>
+				      <div class="project"><img src="images/car4.jpg" alt=""/></div>
+				      <div class="project"><img src="images/car.jpg" alt=""/></div>
+				      <div class="project"><img src="images/car1.jpg" alt=""/></div>
+				      <div class="project"><img src="images/car2.jpg" alt=""/></div>
+				      <div class="project"><img src="images/car3.jpg" alt=""/></div>
+				      <div class="project"><img src="images/car4.jpg" alt=""/></div>
+				    </div>
+				    <div class="project-screen">
+				      <div class="project-detail">
+				        <div class="project"><img src="images/car.jpg" alt=""/></div>
+				        <div class="project"><img src="images/car1.jpg" alt=""/></div>
+				        <div class="project"><img src="images/car2.jpg" alt=""/></div>
+				        <div class="project"><img src="images/car3.jpg" alt=""/></div>
+				        <div class="project"><img src="images/car4.jpg" alt=""/></div>
+				        <div class="project"><img src="images/car.jpg" alt=""/></div>
+				        <div class="project"><img src="images/car1.jpg" alt=""/></div>
+				        <div class="project"><img src="images/car2.jpg" alt=""/></div>
+				        <div class="project"><img src="images/car3.jpg" alt=""/></div>
+				        <div class="project"><img src="images/car4.jpg" alt=""/></div>
+				      </div>
+				      <div class="screen-frame"></div>
+				    </div>
+				  </div>
+				
+				  <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+				<script src='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js'></script>
 
-			
+				  
+
+				    <script  src="assets/js/index.js"></script>
 
 			<!-- Four -->
 				<section id="four" class="wrapper style1 special fade-up">
