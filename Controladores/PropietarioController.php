@@ -1,7 +1,7 @@
 <?php
 require_once("Modelos/Propietario.php");
 require_once("Modelos/Vehiculo.php");
-class CursoController{
+class PropietarioController{
 	public static function main($action){
 
 		$_this = new PropietarioController();
@@ -35,7 +35,7 @@ class CursoController{
 				$dir= $_POST["Propietario"]["Direccion"];
 				$doc= $_POST["Propietario"]["Documento"];
 				$cel= $_POST["Propietario"]["Celular"];
-				$idv= $_POST["Curso"]["_idvehiculo"];
+				$idv= $_POST["Curso"]["id_vehiculo"];
 				
 
 			$Propietario = new Propietario();
@@ -75,7 +75,7 @@ class CursoController{
 	   		 	$Propietario->findByPk($_GET["id"]);
 
 	   		 	$veh = new Vehiculo();
-	   		 	$veh->findByPk($Propietario->_idvehiculo);
+	   		 	$veh->findByPk($Propietario->id_vehiculo);
 				$vehiculo = $veh->admin();
 
 				//$con = new Conductor();
@@ -87,7 +87,7 @@ class CursoController{
 	   		 		$Propietario->Direccion=$_POST["Propietario"]["Direccion"];
 	   		 		$Propietario->Documento=$_POST["Propietario"]["Documento"];
 	   		 		$Propietario->Celular=$_POST["Propietario"]["Celular"];
-	   		 		$Propietario->_idvehiculo=$_POST["Propietario"]["_idvehiculo"];
+	   		 		$Propietario->id_vehiculo=$_POST["Propietario"]["id_vehiculo"];
 
 	   		 		
 

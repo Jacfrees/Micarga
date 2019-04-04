@@ -18,7 +18,7 @@
 							<li>
 								<a href="#" class="hh">REGISTROS</a>
 								<ul>
-									
+									<li><a href="index.php?c=Propietario&a=create" class="hh">PROPIETARIO</a></li>
 									<li><a href="index.php?c=Conductor&a=create" class="hh">CONDUCTOR</a></li>
 									<li><a href="index.php?c=Vehiculo&a=create" class="hh">VEHICULO</a></li>
 									
@@ -36,6 +36,7 @@
 								<a href="#" class="hh">LISTADOS</a>
 								<ul>
 									<li><a href="index.php?c=Usuario&a=admin" class="hh">USUARIOS</a></li>
+									<li><a href="index.php?c=Propietario&a=admin" class="hh">PROPIETARIO</a></li>
 									<li><a href="index.php?c=Conductor&a=admin" class="hh">CONDUCTOR</a></li>
 									<li><a href="index.php?c=Vehiculo&a=admin" class="hh">VEHICULO</a></li>
 									
