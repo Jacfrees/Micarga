@@ -2,11 +2,11 @@
 
  <div class="class1">
 
-<form method="post" autocomplete="off" class="container" action="" enctype="multipart/form-data">
+<form action="" method="post"  class="container">
 
                             <h2><b><center> Registrar Propietario</b></center></h2>
                             <label >Nombre</label>
-                            <input maxlength="45" type="text" name="Propietario[Nombre]"onkeypress="return letras(event)" placeholder="acepta solo letras"value="" required/>
+                            <input maxlength="45" type="text"onkeypress="return soloLetras(event)"  name="Conductor[Nombre]" placeholder="Solo acepta letras" value="" required="" autocomplete="off">
                             <br>
                             <label >Direccion</label>
                             <input maxlength="45" type="text"  name="Propietario[Direccion]" placeholder="acepta numeros y letras"value="" required/>
@@ -16,7 +16,7 @@
                             <input maxlength="45" type="text" onkeypress="return numeros(event)" name="Propietario[Documento]" placeholder="Solo acepta numeros"value="" required/>
                             <br>  
                             <label >Celular</label>
-                            <input maxlength="45" type="text"  name="Propietario[Celular]"onkeypress="return numeros(event)" placeholder="Solo acepta numeros"value="" required/>
+                            <input maxlength="45" type="text" onkeypress="return numeros(event)"   name="Propietario[Celular]" onkeypreplaceholder="Solo acepta numeros"value="" required/>
                             <br>
                            
                             <label>Vehiculo</label>

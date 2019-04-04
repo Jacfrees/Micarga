@@ -6,8 +6,8 @@
 <form method="post" class="container">
                           
                             <label >Nombre</label>
-                            <input maxlength="45" type="text" onkeypress="return soloLetras(event)" name="Propietario[Nombre]" 
-                            value="<?= $Propietario->Nombre ?>" required/>
+                            <input maxlength="45" type="text" onkeypress="return soloLetras(event)" name="Conductor[Nombre]" 
+                            value="<?= $Conductor->Nombre ?>" required/>
                             <br>
                             <label >Direccion</label>
                             <input maxlength="45" type="text" name="Propietario[Direccion]"
