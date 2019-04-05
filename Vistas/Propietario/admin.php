@@ -18,7 +18,6 @@
                         <th>Direccion</th>
                         <th>Documento</th>
                         <th>Celular</th>
-                        <th >Vehiculo</th>
                         <th >Acciones</th>
                         </tr>
             <?php foreach($Propietario as $pro) {?>
@@ -28,7 +27,6 @@
     <td><?= $pro->Direccion;?></td>
     <td><?= $pro->Documento;?></td>
     <td><?= $pro->Celular;?></td>
-    <td><?= $pro->vehic->Propietario;?></td>
    
     <td >
                 <a href="index.php?c=Propietario&a=update&id=<?= $pro->idPropietario; ?>" class="boton_personalizado2"> Editar</a>

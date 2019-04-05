@@ -32,7 +32,7 @@
 
                             <label>Subir carta propiedad:</label>
                             <input type="file" name="userfile"> 
-                            <br><br>
+                            <br>
                                                         
                             <label>Conductor</label>
                             <select name="Vehiculo[Conductor_idConductor]"required="" >
@@ -40,6 +40,17 @@
 
                                 <?php foreach ($conductor as $conduc ) {?>
                                     <option value="<?= $conduc->idConductor ?>"><?= $conduc->Documento ?></option>
+                                   
+                             <?php   } ?>
+                            </select>
+                            <br>
+
+                            <label>Propietario</label>
+                            <select name="Vehiculo[Propietario_idPropietario]"required="" >
+                                <option>Propietario</option>
+
+                                <?php foreach ($propietario as $conduc ) {?>
+                                    <option value="<?= $conduc->idPropietario ?>"><?= $conduc->Documento ?></option>
                                    
                              <?php   } ?>
                             </select>

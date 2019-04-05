@@ -6,7 +6,7 @@
 
                             <h2><b><center> Registrar Propietario</b></center></h2>
                             <label >Nombre</label>
-                            <input maxlength="45" type="text"onkeypress="return soloLetras(event)"  name="Conductor[Nombre]" placeholder="Solo acepta letras" value="" required="" autocomplete="off">
+                            <input maxlength="45" type="text"onkeypress="return soloLetras(event)"  name="Propietario[Nombre]" placeholder="Solo acepta letras" value="" required="" autocomplete="off">
                             <br>
                             <label >Direccion</label>
                             <input maxlength="45" type="text"  name="Propietario[Direccion]" placeholder="acepta numeros y letras"value="" required/>
@@ -19,16 +19,7 @@
                             <input maxlength="45" type="text" onkeypress="return numeros(event)"   name="Propietario[Celular]" onkeypreplaceholder="Solo acepta numeros"value="" required/>
                             <br>
                            
-                            <label>Vehiculo</label>
-                            <select name="Propietario[id_vehiculo]"required="" >
-                                <option>Vehiculo</option>
-
-                                <?php foreach ($Vehiculo as $vehic ) {?>
-                                    <option value="<?= $vehic->id_vehiculo ?>"><?= $vehic->Vehiculo ?></option>
-                                   
-                             <?php   } ?>
-                            </select>
-                            <br>
+                            
                     
                             <button type="reset" class="boton_personalizado4">Cancelar</button>
                             <button type="submit" class="boton_personalizado3">Guardar</button>

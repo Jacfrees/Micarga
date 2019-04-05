@@ -6,8 +6,8 @@
 <form method="post" class="container">
                           
                             <label >Nombre</label>
-                            <input maxlength="45" type="text" onkeypress="return soloLetras(event)" name="Conductor[Nombre]" 
-                            value="<?= $Conductor->Nombre ?>" required/>
+                            <input maxlength="45" type="text" onkeypress="return soloLetras(event)" name="Propietario[Nombre]" 
+                            value="<?= $Propietario->Nombre ?>" required/>
                             <br>
                             <label >Direccion</label>
                             <input maxlength="45" type="text" name="Propietario[Direccion]"
@@ -22,17 +22,6 @@
                             value="<?= $Propietario->Celular ?>" required/>
                             <br>
                             
-                            <label>Vehiculo:</label>
-                            <select name="Propietario[id_vehiculo]"required="" value="<?= $Propietario->id_vehiculo ?>">
-                                <option value="<?= $veh->id_vehiculo ?>"> <?= $veh->Vehiculo ?></option>
-                                
-                                <?php foreach ($Vehiculo as $vehic ) {?>
-                                    <option value="<?= $vehic->id_vehiculo ?>"><?= $vehic->Vehiculo ?></option>
-                                   
-                             <?php   } ?>
-                            </select>
-                            <br>
-                           
                         <button type="submit" class="boton_personalizado4">Guardar</button>
                         
                         </form>

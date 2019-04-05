@@ -21,6 +21,7 @@
                         <th>Capacidad Tanque</th>
                         <th>Seccional</th>
                         <th>Conductor</th>
+                        <th>Propietario</th>
                         <th>Acciones</th>
                 
                         </tr>
@@ -36,6 +37,7 @@
             <td><?= $veh->CapacidadTanque;?></td>
             <td><?= $veh->Seccional;?></td>
             <td><?= $veh->Conduc->Documento;?></td>
+            <td><?= $veh->pp->Documento;?></td>
             
             <td >
                 <a href="index.php?c=Vehiculo&a=update&id=<?= $veh->idVehiculo; ?>" class="boton_personalizado2">Editar</a>

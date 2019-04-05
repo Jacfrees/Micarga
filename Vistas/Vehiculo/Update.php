@@ -45,6 +45,16 @@
                              <?php   } ?>
                             </select>
                             <br>
+
+                            <label>Propietario:</label>
+                            <select name="Vehiculo[Propietario_idPropietario]"required="" value="<?= $Vehiculo->Propietario_idPropietario ?>">
+                                <option value="<?= $pro->idPropietario ?>"> <?= $pro->Documento ?></option>
+                                <?php foreach ($propietario as $nn ) {?>
+                                    <option value="<?= $nn->idPropietario ?>"><?= $nn->Documento ?></option>
+                                   
+                             <?php   } ?>
+                            </select>
+                            <br>
                            
                         <button type="submit" class="boton_personalizado4">Guardar</button>
                         

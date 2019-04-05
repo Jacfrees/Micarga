@@ -9,22 +9,21 @@ class Propietario extends Conexion{
 	Public $Direccion;
 	public $Documento;
 	public $Celular;
-	public $id_vehiculo;
+	
 
 	public function __construct(){
 	parent::__construct();
 }
 
-public function save($nom,$dir,$doc,$cel,$idv){
+public function save($nom,$dir,$doc,$cel){
 
 	$this->Nombre=$nom;
 	$this->Direccion=$dir;
 	$this->Documento=$doc;
 	$this->Celular=$cel;
-	$this->id_vehiculo=$idv;
 
 	$Conexion = $this->getConexion();
-	$stm = $Conexion->prepare("INSERT INTO Propietario VALUES (:idPropietario, :Nombre, :Direccion, :Documento, :Celular, :id_vehiculo)");
+	$stm = $Conexion->prepare("INSERT INTO Propietario VALUES (:idPropietario, :Nombre, :Direccion, :Documento, :Celular)");
 	try{
 		return $stm->execute((array)$this);
 		return true;
@@ -40,14 +39,12 @@ public function save($nom,$dir,$doc,$cel,$idv){
 public function update (){
 	$Conexion = $this->getConexion();
 
-	$stm = $Conexion->prepare("UPDATE Propietario SET Nombre=:Nombre, Direccion=:Direccion, Documento=:Documento, Celular=:Celular, _
-		id_vehiculo=:id_vehiculo  WHERE idPropietario= :id");
+	$stm = $Conexion->prepare("UPDATE Propietario SET Nombre=:Nombre, Direccion=:Direccion, Documento=:Documento, Celular=:Celular WHERE idPropietario= :id");
 
 	$stm->bindparam(":Nombre",$this->Nombre);
 	$stm->bindparam(":Direccion",$this->Direccion);
 	$stm->bindparam(":Documento",$this->Documento);
 	$stm->bindparam(":Celular",$this->Celular);
-	$stm->bindparam(":id_vehiculo",$this->_idvehiculo);
 	$stm->bindparam(":id",$this->idPropietario);
     $stm->execute();
 }
@@ -80,9 +77,7 @@ public function delete($id){
 			
 			while ($obj = $stm->fetch()) {
 
-				$vehic = new Vehiculo();
-				$vehic->findBypk($obj->id_Vehiculo);
-				$obj->vehi = $vehic;
+				
 			    $Propietario[]=$obj;
 			}
 	

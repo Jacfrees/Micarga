@@ -1,6 +1,7 @@
 <?php
 require_once("Modelos/Vehiculo.php");
 require_once("Modelos/Conductor.php");
+require_once("Modelos/Propietario.php");
 
 class VehiculoController{
 	public static function main($action){
@@ -82,11 +83,12 @@ class VehiculoController{
 				$ct= $_POST["Vehiculo"]["CapacidadTanque"];
 				$sec=$_POST["Vehiculo"]["Seccional"];
 				$idc= $_POST["Vehiculo"]["Conductor_idConductor"];
+				$idp= $_POST["Vehiculo"]["Propietario_idPropietario"];
 				
 
 
 			$vehiculo = new Vehiculo();
-			$guardo = $vehiculo->save($pc,$m,$c,$pr,$ct,$sec,$idc);
+			$guardo = $vehiculo->save($pc,$m,$c,$pr,$ct,$sec,$idc,$idp);
 			if ($guardo){
 			    header("location:index.php?c=Vehiculo&a=admin");
 			}else{
@@ -98,6 +100,9 @@ class VehiculoController{
 			
 	   		 		$con = new Conductor();
 					$conductor = $con->admin();
+
+					$prop = new Propietario();
+					$propietario = $prop->admin();
 
 				require "Vistas/Vehiculo/create.php";
 			}
@@ -111,6 +116,9 @@ class VehiculoController{
 				$con = new Conductor();
 				$conductor = $con->admin();
 
+				$prop = new Propietario();
+				$propietario = $prop->admin();
+
 
 				require"Vistas/Vehiculo/admin.php";
 			}
@@ -123,8 +131,11 @@ class VehiculoController{
 	   		 	$con->findByPk($Vehiculo->Conductor_idConductor);
 				$conductor = $con->admin();
 
-				//$con = new Conductor();
-	   		 	//$con->idVeh($_GET["id"]);
+				$pro = new Propietario();
+	   		 	$pro->findByPk($Vehiculo->Propietario_idPropietario);
+				$propietario = $pro->admin();
+
+				
 
 
 	   		 	if (isset($_POST["Vehiculo"])){
@@ -135,6 +146,7 @@ class VehiculoController{
 	   		 		$Vehiculo->CapacidadTanque=$_POST["Vehiculo"]["CapacidadTanque"];
 	   		 		$Vehiculo->Seccional=$_POST["Vehiculo"]["Seccional"];
 	   		 	    $Vehiculo->Conductor_idConductor=$_POST["Vehiculo"]["Conductor_idConductor"];
+	   		 	    $Vehiculo->Propietario_idPropietario=$_POST["Vehiculo"]["Propietario_idPropietario"];
 
 
 

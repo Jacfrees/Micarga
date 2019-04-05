@@ -35,11 +35,10 @@ class PropietarioController{
 				$dir= $_POST["Propietario"]["Direccion"];
 				$doc= $_POST["Propietario"]["Documento"];
 				$cel= $_POST["Propietario"]["Celular"];
-				$idv= $_POST["Curso"]["id_vehiculo"];
 				
 
 			$Propietario = new Propietario();
-			$guardo = $Propietario->save($nom,$dir,$doc,$cel,$idv);
+			$guardo = $Propietario->save($nom,$dir,$doc,$cel);
 			if ($guardo){
 			 	header("location:index.php?c=Propietario&a=admin");
 			}else{
@@ -49,9 +48,6 @@ class PropietarioController{
 				require "Vistas/Propietario/admin.php";
 				
 				}else{
-
-				$veh = new Vehiculo();
-				$vehiculo = $veh->admin();
 
 				require "Vistas/Propietario/create.php";
 					
@@ -74,23 +70,13 @@ class PropietarioController{
 	   		 	$Propietario = new Propietario();
 	   		 	$Propietario->findByPk($_GET["id"]);
 
-	   		 	$veh = new Vehiculo();
-	   		 	$veh->findByPk($Propietario->id_vehiculo);
-				$vehiculo = $veh->admin();
-
-				//$con = new Conductor();
-	   		 	//$con->idVeh($_GET["id"]);
-
-
 	   		 	if (isset($_POST["Propietario"])){
 	   		 		$Propietario->Nombre=$_POST["Propietario"]["Nombre"];
 	   		 		$Propietario->Direccion=$_POST["Propietario"]["Direccion"];
 	   		 		$Propietario->Documento=$_POST["Propietario"]["Documento"];
 	   		 		$Propietario->Celular=$_POST["Propietario"]["Celular"];
-	   		 		$Propietario->id_vehiculo=$_POST["Propietario"]["id_vehiculo"];
 
 	   		 		
-
 	   		 		$Propietario-> update();
 	   		 		header("Location:index.php?c=Propietario&a=admin");
 
