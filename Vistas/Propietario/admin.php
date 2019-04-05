@@ -2,7 +2,8 @@
 
 <div class="class1">
 <form role="form" >
-                        <h2><b><center> Listado De Propietarios</b></center></h2>
+<h2><b><center> Listado De Propietarios</b></center></h2>
+
     
             <div >
              
