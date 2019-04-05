@@ -6,20 +6,20 @@
 
                             <h2><b><center> Registrar Vehiculo</b></center></h2>
                             <label >Placa Cabezote</label>
-                            <input maxlength="45" type="text"  name="Vehiculo[PlacaCabezote]" onblur="limpia()" placeholder="acepta numeros y letras"value="" required/>
+                            <input maxlength="45" type="text"  name="Vehiculo[PlacaCabezote]" placeholder="Por favor ingrese numeros y letras"value="" required/>
                             <br>
                             <label >Modelo</label>
-                            <input maxlength="45" type="text"  name="Vehiculo[Modelo]"onkeypress="return numeros(event)" onblur="limpia()" placeholder="Solo acepta numeros"value="" required/>
+                            <input maxlength="45" type="text"  name="Vehiculo[Modelo]"onkeypress="return numeros(event)" placeholder="Por favor ingrese numeros"value="" required/>
                             <br>
                             
                             <label >Color</label>
-                            <input maxlength="45" type="text" onkeypress="return soloLetras(event)" name="Vehiculo[Color]" placeholder="Solo acepta letras"value="" required/>
+                            <input maxlength="45" type="text" onkeypress="return soloLetras(event)" name="Vehiculo[Color]" placeholder="Por favor ingrese letras"value="" required/>
                             <br>  
                             <label >Placa Remolque</label>
-                            <input maxlength="45" type="text"  name="Vehiculo[PlacaRemolque]" placeholder="acepta numeros y letras"value="" required/>
+                            <input maxlength="45" type="text"  name="Vehiculo[PlacaRemolque]" placeholder="Por favor ingrese numeros y letras"value="" required/>
                             <br>
                             <label>Capacidad Tanque</label>
-                            <input maxlength="45" type="text"  name="Vehiculo[CapacidadTanque]"onkeypress="return numeros(event)" placeholder="Solo acepta numeros"value="" required/>
+                            <input maxlength="45" type="text"  name="Vehiculo[CapacidadTanque]"onkeypress="return numeros(event)" placeholder="Por favor ingrese numeros"value="" required/>
                             <br>
                             
                             <label>Seccional:</label>
@@ -100,18 +100,6 @@
     }
 </script>
 
-<script>
-function limpia() {
-    var val = document.getElementById("miInput").value;
-    var tam = val.length;
-    for(i = 0; i < tam; i++) {
-        if(!isNaN(val[i]))
-            document.getElementById("miInput").value = '';
-    }
-}
-</script>
-                            
-
-                            
+                         
 </div>
 <?php include_once("Vistas/footer.php"); ?>

@@ -6,14 +6,14 @@
                             <form action="" method="post" class="container" autocomplete="off">
 
                             <label >Nombre</label>
-                            <input maxlength="45" type="text" onkeypress="return soloLetras(event)"name="Usuario[Nombre]" placeholder="Solo acepta letras" value="" required/>
+                            <input maxlength="45" type="text" onkeypress="return soloLetras(event)"name="Usuario[Nombre]" placeholder="Por favor ingrese letras" value="" required/>
                             <br>
                             <label >Documento</label>
-                            <input maxlength="45" type="text" name="Usuario[Documento]"onkeypress="return numeros(event)" placeholder="Solo acepta numeros" value="" required/>
+                            <input maxlength="45" type="text" name="Usuario[Documento]"onkeypress="return numeros(event)" placeholder="Por favor ingrese numeros" value="" required/>
 
                             <br>
                             <label >Telefono</label>
-                            <input maxlength="45" type="text"  name="Usuario[Telefono]"onkeypress="return numeros(event)" placeholder="Solo acepta nemeros"  value="" required/>
+                            <input maxlength="45" type="text"  name="Usuario[Telefono]"onkeypress="return numeros(event)" placeholder="Por favor ingrese numeros"  value="" required/>
                             <br>  
                             <label>Perfil:</label>
                             <select name="Usuario[Perfil]" value="" required="">

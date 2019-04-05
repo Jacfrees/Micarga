@@ -6,16 +6,16 @@
                             <form action="" method="post" class="container">
                             
                             <label >Nombre</label>
-                            <input maxlength="45" type="text"onkeypress="return soloLetras(event)"  name="Conductor[Nombre]" placeholder="Solo acepta letras" value="" required="" autocomplete="off">
+                            <input maxlength="45" type="text"onkeypress="return soloLetras(event)"  name="Conductor[Nombre]" placeholder="Por favor ingrese letras" value="" required=/ autocomplete="off">
                             <br>
                             <label >Documento</label>
-                            <input maxlength="45" type="text"  name="Conductor[Documento]"onkeypress="return numeros(event)" placeholder="Solo acepta numeros" value="" required/ autocomplete="off">
+                            <input maxlength="45" type="text"  name="Conductor[Documento]"onkeypress="return numeros(event)" placeholder="Por favor ingrese numeros" value="" required/ autocomplete="off">
                             <br>
                             <label >Numero Celular</label>
-                            <input maxlength="45" type="text"  name="Conductor[NumCelular]"onkeypress="return numeros(event)" placeholder="Solo acepta numeros" value="" required/ autocomplete="off">
+                            <input maxlength="45" type="text"  name="Conductor[NumCelular]"onkeypress="return numeros(event)" placeholder="Por favor ingrese numeros" value="" required/ autocomplete="off">
                             <br>  
                             <label >Licencia Conduccion</label>
-                            <input maxlength="45" type="text"  name="Conductor[LicConduccion]"onkeypress="return numeros(event)" placeholder="Solo acepta numeros"value="" required/ autocomplete="off">
+                            <input maxlength="45" type="text"  name="Conductor[LicConduccion]"onkeypress="return numeros(event)" placeholder="Por favor ingrese numeros"value="" required/ autocomplete="off">
                             <br>
                             <label>Vencimiento Licencia</label>
                             <input maxlength="45" type="date"  name="Conductor[VenLicencia]" value="" required/ autocomplete="off">
